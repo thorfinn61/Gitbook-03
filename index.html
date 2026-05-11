@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Rank 03 — Révisions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark"><img src="fda9a680842f322049f34f5ac228317e.jpg" alt="Avatar" /></div>
+      <div>
+        <div class="brand-title">Exam Rank</div>
+        <div class="brand-sub">Révisions · Python</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-section">Démarrer</div>
+      <a class="nav-link" href="#accueil"><span class="nav-dot"></span>Accueil</a>
+
+      <div class="nav-section">Exercices</div>
+      <a class="nav-link" href="#cryptic_sorter"><span class="nav-num">01</span>cryptic_sorter</a>
+      <a class="nav-link" href="#echo_validator"><span class="nav-num">02</span>echo_validator</a>
+      <a class="nav-link" href="#valid_parentheses"><span class="nav-num">03</span>valid_parentheses</a>
+      <a class="nav-link" href="#number_base_converter"><span class="nav-num">04</span>number_base_converter</a>
+      <a class="nav-link" href="#pattern_tracker"><span class="nav-num">05</span>pattern_tracker</a>
+      <a class="nav-link" href="#shadow_merge"><span class="nav-num">06</span>shadow_merge</a>
+      <a class="nav-link" href="#string_sculptor"><span class="nav-num">07</span>string_sculptor</a>
+      <a class="nav-link" href="#whisper_cipher"><span class="nav-num">08</span>whisper_cipher</a>
+    </nav>
+
+    <div class="theme-toggle">
+      <button id="themeBtn" aria-label="Changer de thème">
+        <svg id="iconSun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg id="iconMoon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span id="themeLabel">Sombre</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <!-- ACCUEIL -->
+    <section id="accueil" class="page hero">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Exam · Rank 03 · Python
+      </div>
+      <h1>
+        Huit exercices.<br>
+        <span class="serif italic">Une seule chance.</span>
+      </h1>
+      <p class="lede">
+        Toutes les fiches dont tu as besoin pour réviser l'exam :
+        énoncés clairs, exemples détaillés, pièges identifiés, solutions à portée de clic.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#cryptic_sorter" class="btn btn-primary">Commencer la révision →</a>
+        <a href="#accueil" class="btn btn-ghost">8 exercices · ~2h de révision</a>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="#cryptic_sorter">
+          <div class="card-head"><span class="card-num">01</span><span class="card-arrow">→</span></div>
+          <span class="card-title">cryptic_sorter</span>
+          <span class="card-desc">Tri multi-critères de chaînes</span>
+        </a>
+        <a class="card" href="#echo_validator">
+          <div class="card-head"><span class="card-num">02</span><span class="card-arrow">→</span></div>
+          <span class="card-title">echo_validator</span>
+          <span class="card-desc">Détection de palindrome</span>
+        </a>
+        <a class="card" href="#valid_parentheses">
+          <div class="card-head"><span class="card-num">03</span><span class="card-arrow">→</span></div>
+          <span class="card-title">valid_parentheses</span>
+          <span class="card-desc">Parenthèses équilibrées</span>
+        </a>
+        <a class="card" href="#number_base_converter">
+          <div class="card-head"><span class="card-num">04</span><span class="card-arrow">→</span></div>
+          <span class="card-title">number_base_converter</span>
+          <span class="card-desc">Conversion entre bases</span>
+        </a>
+        <a class="card" href="#pattern_tracker">
+          <div class="card-head"><span class="card-num">05</span><span class="card-arrow">→</span></div>
+          <span class="card-title">pattern_tracker</span>
+          <span class="card-desc">Paires de chiffres consécutifs</span>
+        </a>
+        <a class="card" href="#shadow_merge">
+          <div class="card-head"><span class="card-num">06</span><span class="card-arrow">→</span></div>
+          <span class="card-title">shadow_merge</span>
+          <span class="card-desc">Fusion de listes triées</span>
+        </a>
+        <a class="card" href="#string_sculptor">
+          <div class="card-head"><span class="card-num">07</span><span class="card-arrow">→</span></div>
+          <span class="card-title">string_sculptor</span>
+          <span class="card-desc">Alternance de casse</span>
+        </a>
+        <a class="card" href="#whisper_cipher">
+          <div class="card-head"><span class="card-num">08</span><span class="card-arrow">→</span></div>
+          <span class="card-title">whisper_cipher</span>
+          <span class="card-desc">Chiffrement de César</span>
+        </a>
+      </div>
+
+      <div class="tips">
+        <div class="tips-label">Avant de commencer</div>
+        <h3>Quatre règles d'or pour ne pas se planter</h3>
+        <ul>
+          <li><strong>Lis tout l'énoncé</strong> avant d'écrire la moindre ligne. Les cas limites sont planqués dedans.</li>
+          <li><strong>Teste les cas limites</strong> systématiquement : chaîne vide, liste vide, entrée invalide.</li>
+          <li><strong>Respecte la signature exacte</strong> et le nom du fichier attendu — un typo = 0.</li>
+          <li><strong>Aucun import autorisé</strong> — toutes les fonctions built-in restent permises, mais interdiction de faire <code>import</code> quoi que ce soit.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 01 cryptic_sorter -->
+    <section id="cryptic_sorter" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 01 / 08</div>
+        <h2>cryptic_sorter</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_cryptic_sorter.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui trie une liste de chaînes selon <strong>plusieurs critères</strong>,
+        appliqués dans l'ordre suivant :
+      </p>
+      <ol>
+        <li><strong>Tri principal</strong> — par longueur de chaîne (la plus courte en premier).</li>
+        <li><strong>Tri secondaire</strong> — alphabétique (pour les chaînes de même longueur).</li>
+        <li><strong>Tri tertiaire</strong> — par nombre de voyelles (ascendant, pour chaînes identiques lexicalement).</li>
+      </ol>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def cryptic_sorter(strings: list[str]) -> list[str]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Gérer les chaînes vides et la liste vide.</li>
+        <li>Casse mixte : traiter comme minuscule pour le tri alphabétique.</li>
+        <li>Caractères spéciaux : ignorés pour le compte des voyelles.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>cryptic_sorter(["apple", "cat", "banana", "dog", "elephant"])</code></div><div class="ex-out"><code>["cat", "dog", "apple", "banana", "elephant"]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>cryptic_sorter(["aaa", "bbb", "AAA", "BBB"])</code></div><div class="ex-out"><code>["AAA", "aaa", "BBB", "bbb"]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>cryptic_sorter(["hello", "world", "hi", "test"])</code></div><div class="ex-out"><code>["hi", "test", "hello", "world"]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>cryptic_sorter([])</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>cryptic_sorter([""])</code></div><div class="ex-out"><code>[""]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Penser à fournir une <em>clé de tri</em> qui combine les trois critères dans le bon ordre.</li>
+          <li>La casse intervient deux fois : tri alphabétique (lowercase) puis départage par chaîne d'origine.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary>
+          <span class="sol-icon">▶</span>
+          <span class="sol-text">Voir la solution</span>
+        </summary>
+        <pre><code class="language-python">def cryptic_sorter(strings: list[str]) -> list[str]:
+    def is_vowel(c):
+        return c.lower() in 'aeiou'
+
+    def key_func(s):
+        length = len(s)
+        vowel_count = sum(1 for c in s if is_vowel(c))
+        return (length, s.lower(), s, vowel_count)
+
+    return sorted(strings, key=key_func)</code></pre>
+      </details>
+    </section>
+
+    <!-- 02 echo_validator -->
+    <section id="echo_validator" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 02 / 08</div>
+        <h2>echo_validator</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_echo_validator.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui vérifie si une chaîne est un <strong>palindrome</strong>, en
+        ignorant les espaces et la casse, et en ne considérant que les caractères alphabétiques.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def echo_validator(text: str) -> bool:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Ignorer espaces, ponctuation et tout caractère non alphabétique.</li>
+        <li>Ignorer la casse (comparaison en minuscule).</li>
+        <li>Une chaîne vide retourne <code>False</code>.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>echo_validator("racecar")</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>echo_validator("A man a plan a canal Panama")</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>echo_validator("race a car")</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>echo_validator("Was it a car or a cat I saw")</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>echo_validator("hello")</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>echo_validator("Madam I'm Adam")</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>echo_validator("")</code></div><div class="ex-out"><code>False</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Ne pas oublier le cas particulier de la chaîne vide qui doit renvoyer <code>False</code>.</li>
+          <li>Filtrer d'abord (ne garder que les lettres), normaliser ensuite (minuscule), puis comparer.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def echo_validator(text: str) -> bool:
+    if text == "":
+        return False
+    new_text = "".join(c.lower() for c in text if c.isalpha())
+    start = 0
+    end = len(new_text) - 1
+
+    while start < end:
+        if new_text[start] != new_text[end]:
+            return False
+        start += 1
+        end -= 1
+
+    return True</code></pre>
+      </details>
+    </section>
+
+    <!-- 03 valid_parentheses -->
+    <section id="valid_parentheses" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 03 / 08</div>
+        <h2>valid_parentheses</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_valid_parentheses.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Lis une chaîne sur l'<strong>entrée standard</strong> et détermine si les parenthèses,
+        crochets et accolades qu'elle contient sont correctement équilibrés et imbriqués.
+        Affiche <code>True</code> si la chaîne est valide, <code>False</code> sinon.
+      </p>
+      <p>Trois paires de symboles à gérer :</p>
+      <ul>
+        <li><code>(</code> ouvre · <code>)</code> ferme</li>
+        <li><code>[</code> ouvre · <code>]</code> ferme</li>
+        <li><code>{</code> ouvre · <code>}</code> ferme</li>
+      </ul>
+
+      <h3>Règles</h3>
+      <ul>
+        <li>Chaque symbole ouvert doit être refermé par le bon symbole correspondant.</li>
+        <li>L'ordre d'imbrication doit être respecté.</li>
+        <li>Une chaîne vide est considérée comme valide.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>"()"</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>"()[]{}"</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>"(]"</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>"([)]"</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>"{[]}"</code></div><div class="ex-out"><code>True</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Penser à utiliser une structure <em>LIFO</em> (pile) pour vérifier la correspondance.</li>
+          <li>Une fermeture qui arrive sans ouverture correspondante invalide la chaîne immédiatement.</li>
+          <li>À la fin, la pile doit être <strong>vide</strong> — sinon il reste des ouvertures non refermées.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def is_valid_parentheses(s):
+    stack = []
+    pairs = {'(': ')', '[': ']', '{': '}'}
+    for char in s:
+        if char in pairs:
+            stack.append(char)
+        elif not stack or pairs[stack.pop()] != char:
+            return False
+    return len(stack) == 0
+
+
+def main():
+    s = input().strip()
+    print("True" if is_valid_parentheses(s) else "False")
+
+
+if __name__ == "__main__":
+    main()</code></pre>
+      </details>
+    </section>
+
+    <!-- 04 number_base_converter -->
+    <section id="number_base_converter" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 04 / 08</div>
+        <h2>number_base_converter</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_number_base_converter.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui convertit un nombre d'une base vers une autre.
+        Bases supportées : <strong>de 2 à 36 inclus</strong>, en utilisant les
+        chiffres <code>0-9</code> et les lettres <code>A-Z</code> pour les valeurs 10 à 35.
+        Retourne <code>"ERROR"</code> en cas d'entrée invalide.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def number_base_converter(number: str, from_base: int, to_base: int) -> str:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Bases valides : <code>2 ≤ base ≤ 36</code>.</li>
+        <li>Un caractère du nombre doit appartenir à l'alphabet de sa base de départ.</li>
+        <li>Le résultat doit utiliser <strong>les majuscules</strong> pour les chiffres &gt; 9.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>number_base_converter("1010", 2, 10)</code></div><div class="ex-out"><code>"10"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>number_base_converter("FF", 16, 10)</code></div><div class="ex-out"><code>"255"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>number_base_converter("255", 10, 16)</code></div><div class="ex-out"><code>"FF"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>number_base_converter("123", 10, 2)</code></div><div class="ex-out"><code>"1111011"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>number_base_converter("Z", 36, 10)</code></div><div class="ex-out"><code>"35"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>number_base_converter("35", 10, 36)</code></div><div class="ex-out"><code>"Z"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>number_base_converter("123", 1, 10)</code></div><div class="ex-out"><code>"ERROR"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>number_base_converter("G", 16, 10)</code></div><div class="ex-out"><code>"ERROR"</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Le cas <code>num == 0</code> doit explicitement renvoyer <code>"0"</code> et non une chaîne vide.</li>
+          <li>Toute exception levée par la conversion d'entrée doit produire <code>"ERROR"</code>.</li>
+          <li><code>int(number, base)</code> en Python lève une exception si la base est invalide ou si un chiffre n'appartient pas à la base.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def number_base_converter(number: str, from_base: int, to_base: int) -> str:
+    base_str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    try:
+        num = int(number, from_base)
+        if num == 0:
+            return "0"
+        res = ""
+        while num > 0:
+            res = base_str[num % to_base] + res
+            num //= to_base
+    except Exception:
+        return "ERROR"
+    return res</code></pre>
+      </details>
+    </section>
+
+    <!-- 05 pattern_tracker -->
+    <section id="pattern_tracker" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 05 / 08</div>
+        <h2>pattern_tracker</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_pattern_tracker.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui compte le nombre de <strong>paires de chiffres consécutifs valides</strong>
+        dans une chaîne. Une paire valide est constituée de deux chiffres
+        <em>adjacents</em>, où le second est <strong>strictement supérieur</strong> au premier.
+      </p>
+      <p>Attention : un <code>9</code> suivi d'un <code>0</code> <strong>n'est pas</strong> une paire valide.</p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def pattern_tracker(text: str) -> int:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>La paire doit être composée de <strong>deux chiffres</strong> ; un caractère non numérique entre les deux casse la paire.</li>
+        <li>Les paires se chevauchent : dans <code>"123"</code>, on compte (1,2) <em>et</em> (2,3).</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>pattern_tracker("123")</code></div><div class="ex-out"><code>2</code></div></div>
+        <div class="ex"><div class="ex-in"><code>pattern_tracker("12a34")</code></div><div class="ex-out"><code>2</code></div></div>
+        <div class="ex"><div class="ex-in"><code>pattern_tracker("987654321")</code></div><div class="ex-out"><code>0</code></div></div>
+        <div class="ex"><div class="ex-in"><code>pattern_tracker("01234567")</code></div><div class="ex-out"><code>7</code></div></div>
+        <div class="ex"><div class="ex-in"><code>pattern_tracker("abc")</code></div><div class="ex-out"><code>0</code></div></div>
+        <div class="ex"><div class="ex-in"><code>pattern_tracker("1a2b3c4")</code></div><div class="ex-out"><code>0</code></div></div>
+        <div class="ex"><div class="ex-in"><code>pattern_tracker("112233")</code></div><div class="ex-out"><code>2</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Toujours vérifier que les <strong>deux</strong> caractères sont des chiffres avant de comparer.</li>
+          <li>Comparer directement les caractères avec <code>&gt;</code> fonctionne car <code>'0'</code> &lt; <code>'1'</code> &lt; ... &lt; <code>'9'</code> en ASCII.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def pattern_tracker(text: str) -> int:
+    count = 0
+    for i in range(len(text) - 1):
+        if text[i].isdigit() and text[i + 1].isdigit() and text[i + 1] > text[i]:
+            count += 1
+    return count</code></pre>
+      </details>
+    </section>
+
+    <!-- 06 shadow_merge -->
+    <section id="shadow_merge" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 06 / 08</div>
+        <h2>shadow_merge</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_shadow_merge.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui <strong>fusionne deux listes triées</strong> d'entiers
+        en une seule liste triée.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def shadow_merge(list1: list[int], list2: list[int]) -> list[int]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Les deux listes d'entrée sont déjà triées par ordre croissant.</li>
+        <li>Les doublons doivent être conservés.</li>
+        <li>Gérer le cas où l'une des listes (ou les deux) est vide.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>shadow_merge([1, 3, 5], [2, 4, 6])</code></div><div class="ex-out"><code>[1, 2, 3, 4, 5, 6]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>shadow_merge([1, 2, 3], [4, 5, 6])</code></div><div class="ex-out"><code>[1, 2, 3, 4, 5, 6]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>shadow_merge([1], [2, 3, 4])</code></div><div class="ex-out"><code>[1, 2, 3, 4]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>shadow_merge([], [1, 2, 3])</code></div><div class="ex-out"><code>[1, 2, 3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>shadow_merge([1, 1, 2], [1, 3, 3])</code></div><div class="ex-out"><code>[1, 1, 1, 2, 3, 3]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Approche simple : concaténer les deux listes puis trier — accepté ici.</li>
+          <li>Approche optimale : fusion à deux pointeurs (O(n+m) au lieu de O(n log n)).</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def shadow_merge(list1: list[int], list2: list[int]) -> list[int]:
+    list1.extend(list2)
+    list1.sort()
+    return list1</code></pre>
+      </details>
+    </section>
+
+    <!-- 07 string_sculptor -->
+    <section id="string_sculptor" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 07 / 08</div>
+        <h2>string_sculptor</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_string_sculptor.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui transforme une chaîne en <strong>alternant la casse</strong> des
+        caractères alphabétiques uniquement. Les caractères non alphabétiques restent inchangés
+        <strong>et ne comptent pas</strong> dans l'alternance.
+      </p>
+      <p>
+        La première lettre est en <strong>minuscule</strong>, la deuxième en majuscule,
+        la troisième en minuscule, et ainsi de suite.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def string_sculptor(text: str) -> str:</code></pre>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>string_sculptor("hello")</code></div><div class="ex-out"><code>"hElLo"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>string_sculptor("Hello World")</code></div><div class="ex-out"><code>"hElLo wOrLd"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>string_sculptor("abc123def")</code></div><div class="ex-out"><code>"aBc123DeF"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>string_sculptor("Python3.9!")</code></div><div class="ex-out"><code>"pYtHoN3.9!"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>string_sculptor("")</code></div><div class="ex-out"><code>""</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Regarde bien l'exemple <code>"Hello World"</code> : après l'espace, l'alternance <strong>recommence</strong> à minuscule. L'espace fait office de reset.</li>
+          <li>Les chiffres et symboles sont copiés tels quels <strong>sans affecter</strong> le compteur d'alternance.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def string_sculptor(text: str) -> str:
+    res = ""
+    lower = 1
+    for c in text:
+        if c.isalpha() and lower:
+            res += c.lower()
+            lower = 0
+        elif c.isalpha():
+            res += c.upper()
+            lower = 1
+        elif c.isspace():
+            res += c
+            lower = 1
+        else:
+            res += c
+    return res</code></pre>
+      </details>
+    </section>
+
+    <!-- 08 whisper_cipher -->
+    <section id="whisper_cipher" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 08 / 08</div>
+        <h2>whisper_cipher</h2>
+        <div class="meta">
+          <span class="badge">📄 <code>py_whisper_cipher.py</code></span>
+          <span class="badge">🚫 Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui implémente un <strong>chiffre simple (César)</strong> en décalant
+        chaque lettre d'une chaîne d'un certain nombre de positions. Les caractères
+        non alphabétiques restent inchangés.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def whisper_cipher(text: str, shift: int) -> str:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>La casse doit être <strong>préservée</strong> (les majuscules restent majuscules).</li>
+        <li>Le décalage est circulaire dans l'alphabet (<code>z</code> + 1 → <code>a</code>).</li>
+        <li>Le décalage peut être <strong>négatif</strong>.</li>
+        <li>Caractères non alphabétiques : recopiés tels quels.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>whisper_cipher("hello", 3)</code></div><div class="ex-out"><code>"khoor"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>whisper_cipher("Hello World!", 1)</code></div><div class="ex-out"><code>"Ifmmp Xpsme!"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>whisper_cipher("xyz", 3)</code></div><div class="ex-out"><code>"abc"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>whisper_cipher("ABC123def", 5)</code></div><div class="ex-out"><code>"FGH123ijk"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>whisper_cipher("", 10)</code></div><div class="ex-out"><code>""</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">💡 Pièges courants</div>
+        <ul>
+          <li>Travailler avec les codes ASCII : retrancher <code>65</code> (A) ou <code>97</code> (a) avant le modulo, puis rajouter.</li>
+          <li>Le modulo <code>% 26</code> en Python gère naturellement les décalages négatifs.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def whisper_cipher(text: str, shift: int) -> str:
+    res = ""
+    for c in text:
+        if c.isalpha() and c.isupper():
+            res += chr((ord(c) - 65 + shift) % 26 + 65)
+        elif c.isalpha():
+            res += chr((ord(c) - 97 + shift) % 26 + 97)
+        else:
+            res += c
+    return res</code></pre>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-deco">— · —</div>
+      <p>Bonne révision · prends ton temps sur les cas limites.</p>
+    </footer>
+  </main>
+
+  <!-- Easter egg : edit cachée -->
+  <button class="edit-fab" id="editFab" aria-label="Voir l'edit" title="Edit">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  </button>
+  <div class="edit-modal" id="editModal" aria-hidden="true">
+    <div class="edit-modal-backdrop" data-close></div>
+    <div class="edit-modal-content">
+      <button class="edit-modal-close" data-close aria-label="Fermer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <video id="editVideo" controls playsinline preload="metadata">
+        <source src="copy_1DF6B314-14A9-4314-9076-F4D00C680E23-_1_.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/python.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
