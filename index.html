@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow" aria-hidden="true"></div>
-
   <button class="menu-toggle" aria-label="Menu" id="menuToggle">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
@@ -54,62 +51,57 @@
   <main class="content">
     <!-- ACCUEIL -->
     <section id="accueil" class="page hero">
-      <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
-        Exam · Rank 03 · Python
-      </div>
+      <div class="eyebrow">Exam · Rank 03 · Python</div>
       <h1>
         Huit exercices.<br>
         <span class="serif italic">Une seule chance.</span>
       </h1>
       <p class="lede">
-        Toutes les fiches dont tu as besoin pour réviser l'exam :
-        énoncés clairs, exemples détaillés, pièges identifiés, solutions à portée de clic.
+        Énoncés, exemples et solutions pour réviser sereinement.
       </p>
 
       <div class="hero-cta">
-        <a href="#cryptic_sorter" class="btn btn-primary">Commencer la révision →</a>
-        <a href="#accueil" class="btn btn-ghost">8 exercices · ~2h de révision</a>
+        <a href="#cryptic_sorter" class="btn btn-primary">Commencer →</a>
       </div>
 
       <div class="grid">
         <a class="card" href="#cryptic_sorter">
-          <div class="card-head"><span class="card-num">01</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">01</span></div>
           <span class="card-title">cryptic_sorter</span>
           <span class="card-desc">Tri multi-critères de chaînes</span>
         </a>
         <a class="card" href="#echo_validator">
-          <div class="card-head"><span class="card-num">02</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">02</span></div>
           <span class="card-title">echo_validator</span>
           <span class="card-desc">Détection de palindrome</span>
         </a>
         <a class="card" href="#valid_parentheses">
-          <div class="card-head"><span class="card-num">03</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">03</span></div>
           <span class="card-title">valid_parentheses</span>
           <span class="card-desc">Parenthèses équilibrées</span>
         </a>
         <a class="card" href="#number_base_converter">
-          <div class="card-head"><span class="card-num">04</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">04</span></div>
           <span class="card-title">number_base_converter</span>
           <span class="card-desc">Conversion entre bases</span>
         </a>
         <a class="card" href="#pattern_tracker">
-          <div class="card-head"><span class="card-num">05</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">05</span></div>
           <span class="card-title">pattern_tracker</span>
           <span class="card-desc">Paires de chiffres consécutifs</span>
         </a>
         <a class="card" href="#shadow_merge">
-          <div class="card-head"><span class="card-num">06</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">06</span></div>
           <span class="card-title">shadow_merge</span>
           <span class="card-desc">Fusion de listes triées</span>
         </a>
         <a class="card" href="#string_sculptor">
-          <div class="card-head"><span class="card-num">07</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">07</span></div>
           <span class="card-title">string_sculptor</span>
           <span class="card-desc">Alternance de casse</span>
         </a>
         <a class="card" href="#whisper_cipher">
-          <div class="card-head"><span class="card-num">08</span><span class="card-arrow">→</span></div>
+          <div class="card-head"><span class="card-num">08</span></div>
           <span class="card-title">whisper_cipher</span>
           <span class="card-desc">Chiffrement de César</span>
         </a>
@@ -133,8 +125,8 @@
         <div class="page-eyebrow">Exercice 01 / 08</div>
         <h2>cryptic_sorter</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_cryptic_sorter.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_cryptic_sorter.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -169,7 +161,7 @@
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Penser à fournir une <em>clé de tri</em> qui combine les trois critères dans le bon ordre.</li>
           <li>La casse intervient deux fois : tri alphabétique (lowercase) puis départage par chaîne d'origine.</li>
@@ -200,8 +192,8 @@
         <div class="page-eyebrow">Exercice 02 / 08</div>
         <h2>echo_validator</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_echo_validator.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_echo_validator.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -233,7 +225,7 @@
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Ne pas oublier le cas particulier de la chaîne vide qui doit renvoyer <code>False</code>.</li>
           <li>Filtrer d'abord (ne garder que les lettres), normaliser ensuite (minuscule), puis comparer.</li>
@@ -265,8 +257,8 @@
         <div class="page-eyebrow">Exercice 03 / 08</div>
         <h2>valid_parentheses</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_valid_parentheses.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_valid_parentheses.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -300,7 +292,7 @@
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Penser à utiliser une structure <em>LIFO</em> (pile) pour vérifier la correspondance.</li>
           <li>Une fermeture qui arrive sans ouverture correspondante invalide la chaîne immédiatement.</li>
@@ -337,8 +329,8 @@ if __name__ == "__main__":
         <div class="page-eyebrow">Exercice 04 / 08</div>
         <h2>number_base_converter</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_number_base_converter.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_number_base_converter.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -373,7 +365,7 @@ if __name__ == "__main__":
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Le cas <code>num == 0</code> doit explicitement renvoyer <code>"0"</code> et non une chaîne vide.</li>
           <li>Toute exception levée par la conversion d'entrée doit produire <code>"ERROR"</code>.</li>
@@ -405,8 +397,8 @@ if __name__ == "__main__":
         <div class="page-eyebrow">Exercice 05 / 08</div>
         <h2>pattern_tracker</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_pattern_tracker.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_pattern_tracker.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -439,7 +431,7 @@ if __name__ == "__main__":
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Toujours vérifier que les <strong>deux</strong> caractères sont des chiffres avant de comparer.</li>
           <li>Comparer directement les caractères avec <code>&gt;</code> fonctionne car <code>'0'</code> &lt; <code>'1'</code> &lt; ... &lt; <code>'9'</code> en ASCII.</li>
@@ -463,8 +455,8 @@ if __name__ == "__main__":
         <div class="page-eyebrow">Exercice 06 / 08</div>
         <h2>shadow_merge</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_shadow_merge.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_shadow_merge.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -494,7 +486,7 @@ if __name__ == "__main__":
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Approche simple : concaténer les deux listes puis trier — accepté ici.</li>
           <li>Approche optimale : fusion à deux pointeurs (O(n+m) au lieu de O(n log n)).</li>
@@ -516,8 +508,8 @@ if __name__ == "__main__":
         <div class="page-eyebrow">Exercice 07 / 08</div>
         <h2>string_sculptor</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_string_sculptor.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_string_sculptor.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -545,7 +537,7 @@ if __name__ == "__main__":
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Regarde bien l'exemple <code>"Hello World"</code> : après l'espace, l'alternance <strong>recommence</strong> à minuscule. L'espace fait office de reset.</li>
           <li>Les chiffres et symboles sont copiés tels quels <strong>sans affecter</strong> le compteur d'alternance.</li>
@@ -579,8 +571,8 @@ if __name__ == "__main__":
         <div class="page-eyebrow">Exercice 08 / 08</div>
         <h2>whisper_cipher</h2>
         <div class="meta">
-          <span class="badge">📄 <code>py_whisper_cipher.py</code></span>
-          <span class="badge">🚫 Aucun import autorisé</span>
+          <span class="badge"><code>py_whisper_cipher.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
         </div>
       </header>
 
@@ -612,7 +604,7 @@ if __name__ == "__main__":
       </div>
 
       <div class="hint">
-        <div class="hint-label">💡 Pièges courants</div>
+        <div class="hint-label">Pièges courants</div>
         <ul>
           <li>Travailler avec les codes ASCII : retrancher <code>65</code> (A) ou <code>97</code> (a) avant le modulo, puis rajouter.</li>
           <li>Le modulo <code>% 26</code> en Python gère naturellement les décalages négatifs.</li>
