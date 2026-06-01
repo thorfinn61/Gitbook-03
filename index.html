@@ -37,6 +37,9 @@
       <a class="nav-link" href="#shadow_merge"><span class="nav-num">06</span>shadow_merge</a>
       <a class="nav-link" href="#string_sculptor"><span class="nav-num">07</span>string_sculptor</a>
       <a class="nav-link" href="#whisper_cipher"><span class="nav-num">08</span>whisper_cipher</a>
+      <a class="nav-link" href="#is_anagram"><span class="nav-num">09</span>is_anagram</a>
+      <a class="nav-link" href="#mirror_matrix"><span class="nav-num">10</span>mirror_matrix</a>
+      <a class="nav-link" href="#twister"><span class="nav-num">11</span>twister</a>
     </nav>
 
     <div class="theme-toggle">
@@ -53,7 +56,7 @@
     <section id="accueil" class="page hero">
       <div class="eyebrow">Exam · Rank 03 · Python</div>
       <h1>
-        Huit exercices.<br>
+        Onze exercices.<br>
         <span class="serif italic">Une seule chance.</span>
       </h1>
       <p class="lede">
@@ -105,6 +108,21 @@
           <span class="card-title">whisper_cipher</span>
           <span class="card-desc">Chiffrement de César</span>
         </a>
+        <a class="card" href="#is_anagram">
+          <div class="card-head"><span class="card-num">09</span></div>
+          <span class="card-title">is_anagram</span>
+          <span class="card-desc">Détection d'anagramme</span>
+        </a>
+        <a class="card" href="#mirror_matrix">
+          <div class="card-head"><span class="card-num">10</span></div>
+          <span class="card-title">mirror_matrix</span>
+          <span class="card-desc">Miroir horizontal d'une matrice</span>
+        </a>
+        <a class="card" href="#twister">
+          <div class="card-head"><span class="card-num">11</span></div>
+          <span class="card-title">twister</span>
+          <span class="card-desc">Rotation circulaire d'une liste</span>
+        </a>
       </div>
 
       <div class="tips">
@@ -122,7 +140,7 @@
     <!-- 01 cryptic_sorter -->
     <section id="cryptic_sorter" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 01 / 08</div>
+        <div class="page-eyebrow">Exercice 01 / 11</div>
         <h2>cryptic_sorter</h2>
         <div class="meta">
           <span class="badge"><code>py_cryptic_sorter.py</code></span>
@@ -174,22 +192,19 @@
           <span class="sol-text">Voir la solution</span>
         </summary>
         <pre><code class="language-python">def cryptic_sorter(strings: list[str]) -> list[str]:
-    def is_vowel(c):
-        return c.lower() in 'aeiou'
+    def vowels(s):
+        return sum(1 for c in s.lower() if c in "aeiou")
+    return sorted(strings, key=lambda s: (len(s), s.lower(), s, vowels(s)))
 
-    def key_func(s):
-        length = len(s)
-        vowel_count = sum(1 for c in s if is_vowel(c))
-        return (length, s.lower(), s, vowel_count)
 
-    return sorted(strings, key=key_func)</code></pre>
+cryptic_sorter(["hello", "world", "hi", "test"])</code></pre>
       </details>
     </section>
 
     <!-- 02 echo_validator -->
     <section id="echo_validator" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 02 / 08</div>
+        <div class="page-eyebrow">Exercice 02 / 11</div>
         <h2>echo_validator</h2>
         <div class="meta">
           <span class="badge"><code>py_echo_validator.py</code></span>
@@ -235,26 +250,27 @@
       <details class="solution">
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
         <pre><code class="language-python">def echo_validator(text: str) -> bool:
-    if text == "":
+    new = ""
+    for c in text:
+        if c.isalpha():
+            new += c.lower()
+    if new == "":
         return False
-    new_text = "".join(c.lower() for c in text if c.isalpha())
-    start = 0
-    end = len(new_text) - 1
 
-    while start < end:
-        if new_text[start] != new_text[end]:
-            return False
-        start += 1
-        end -= 1
+    if new == new[::-1]:
+        return True
+    else:
+        return False
 
-    return True</code></pre>
+
+print(echo_validator("fd"))</code></pre>
       </details>
     </section>
 
     <!-- 03 valid_parentheses -->
     <section id="valid_parentheses" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 03 / 08</div>
+        <div class="page-eyebrow">Exercice 03 / 11</div>
         <h2>valid_parentheses</h2>
         <div class="meta">
           <span class="badge"><code>py_valid_parentheses.py</code></span>
@@ -303,30 +319,20 @@
       <details class="solution">
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
         <pre><code class="language-python">def is_valid_parentheses(s):
-    stack = []
-    pairs = {'(': ')', '[': ']', '{': '}'}
-    for char in s:
-        if char in pairs:
-            stack.append(char)
-        elif not stack or pairs[stack.pop()] != char:
-            return False
-    return len(stack) == 0
+    s = ''.join(c for c in s if c in '()[]{}')
 
-
-def main():
-    s = input().strip()
-    print("True" if is_valid_parentheses(s) else "False")
-
-
-if __name__ == "__main__":
-    main()</code></pre>
+    while "()" in s or "[]" in s or "{}" in s:
+        s = s.replace("()", "")
+        s = s.replace("[]", "")
+        s = s.replace("{}", "")
+    return "True" if s == "" else "False"</code></pre>
       </details>
     </section>
 
     <!-- 04 number_base_converter -->
     <section id="number_base_converter" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 04 / 08</div>
+        <div class="page-eyebrow">Exercice 04 / 11</div>
         <h2>number_base_converter</h2>
         <div class="meta">
           <span class="badge"><code>py_number_base_converter.py</code></span>
@@ -377,6 +383,8 @@ if __name__ == "__main__":
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
         <pre><code class="language-python">def number_base_converter(number: str, from_base: int, to_base: int) -> str:
     base_str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    if from_base < 2 or from_base > 36 or to_base < 2 or to_base > 36:
+        return "ERROR"
     try:
         num = int(number, from_base)
         if num == 0:
@@ -394,7 +402,7 @@ if __name__ == "__main__":
     <!-- 05 pattern_tracker -->
     <section id="pattern_tracker" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 05 / 08</div>
+        <div class="page-eyebrow">Exercice 05 / 11</div>
         <h2>pattern_tracker</h2>
         <div class="meta">
           <span class="badge"><code>py_pattern_tracker.py</code></span>
@@ -443,16 +451,19 @@ if __name__ == "__main__":
         <pre><code class="language-python">def pattern_tracker(text: str) -> int:
     count = 0
     for i in range(len(text) - 1):
-        if text[i].isdigit() and text[i + 1].isdigit() and text[i + 1] > text[i]:
+        if text[i].isdigit() and text[i + 1].isdigit() and text[i] < text[i + 1]:
             count += 1
-    return count</code></pre>
+    return count
+
+
+print(pattern_tracker("112233"))</code></pre>
       </details>
     </section>
 
     <!-- 06 shadow_merge -->
     <section id="shadow_merge" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 06 / 08</div>
+        <div class="page-eyebrow">Exercice 06 / 11</div>
         <h2>shadow_merge</h2>
         <div class="meta">
           <span class="badge"><code>py_shadow_merge.py</code></span>
@@ -505,7 +516,7 @@ if __name__ == "__main__":
     <!-- 07 string_sculptor -->
     <section id="string_sculptor" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 07 / 08</div>
+        <div class="page-eyebrow">Exercice 07 / 11</div>
         <h2>string_sculptor</h2>
         <div class="meta">
           <span class="badge"><code>py_string_sculptor.py</code></span>
@@ -547,28 +558,28 @@ if __name__ == "__main__":
       <details class="solution">
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
         <pre><code class="language-python">def string_sculptor(text: str) -> str:
-    res = ""
-    lower = 1
+    new_str = ""
+    count = 0
     for c in text:
-        if c.isalpha() and lower:
-            res += c.lower()
-            lower = 0
-        elif c.isalpha():
-            res += c.upper()
-            lower = 1
-        elif c.isspace():
-            res += c
-            lower = 1
+        if c.isalpha():
+            if count % 2 == 0:
+                new_str += c.lower()
+            else:
+                new_str += c.upper()
+            count += 1
         else:
-            res += c
-    return res</code></pre>
+            new_str += c
+    return new_str
+
+
+print(string_sculptor("Python3.9!"))</code></pre>
       </details>
     </section>
 
     <!-- 08 whisper_cipher -->
     <section id="whisper_cipher" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 08 / 08</div>
+        <div class="page-eyebrow">Exercice 08 / 11</div>
         <h2>whisper_cipher</h2>
         <div class="meta">
           <span class="badge"><code>py_whisper_cipher.py</code></span>
@@ -614,15 +625,186 @@ if __name__ == "__main__":
       <details class="solution">
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
         <pre><code class="language-python">def whisper_cipher(text: str, shift: int) -> str:
-    res = ""
-    for c in text:
-        if c.isalpha() and c.isupper():
-            res += chr((ord(c) - 65 + shift) % 26 + 65)
-        elif c.isalpha():
-            res += chr((ord(c) - 97 + shift) % 26 + 97)
+    lower = "abcdefghijklmnopqrstuvwxyz"
+    upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = ""
+    for char in text:
+        if char in lower:
+            result += lower[(lower.index(char) + shift) % 26]
+        elif char in upper:
+            result += upper[(upper.index(char) + shift) % 26]
         else:
-            res += c
-    return res</code></pre>
+            result += char
+    return result
+
+
+print(whisper_cipher("zekeriya", 5))</code></pre>
+      </details>
+    </section>
+
+    <!-- 09 is_anagram -->
+    <section id="is_anagram" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 09 / 11</div>
+        <h2>is_anagram</h2>
+        <div class="meta">
+          <span class="badge"><code>py_is_anagram.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui détermine si deux chaînes sont des
+        <strong>anagrammes</strong> l'une de l'autre, c'est-à-dire si elles
+        contiennent exactement les mêmes caractères avec les mêmes occurrences.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def isAnagram(s: str, t: str) -> bool:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Deux chaînes vides sont considérées comme des anagrammes (<code>True</code>).</li>
+        <li>La comparaison se fait caractère par caractère (la casse compte).</li>
+        <li>Des longueurs différentes impliquent forcément <code>False</code>.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>isAnagram("anagram", "nagaram")</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>isAnagram("rat", "car")</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>isAnagram("listen", "silent")</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>isAnagram("aabb", "abab")</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>isAnagram("a", "ab")</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>isAnagram("", "")</code></div><div class="ex-out"><code>True</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Trier les deux chaînes puis comparer est l'approche la plus courte (O(n log n)).</li>
+          <li>Alternative en O(n) : compter les occurrences de chaque caractère et comparer les compteurs.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def isAnagram(s: str, t: str) -> bool:
+    return sorted(s) == sorted(t)</code></pre>
+      </details>
+    </section>
+
+    <!-- 10 mirror_matrix -->
+    <section id="mirror_matrix" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 10 / 11</div>
+        <h2>mirror_matrix</h2>
+        <div class="meta">
+          <span class="badge"><code>py_mirror_matrix.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui applique un <strong>miroir horizontal</strong> à une matrice :
+        chaque ligne doit être inversée (premier élément ↔ dernier élément).
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def mirror_matrix(matrix: list[list[int]]) -> list[list[int]]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Gérer la matrice vide ainsi que les lignes vides.</li>
+        <li>Les lignes peuvent être de longueurs différentes.</li>
+        <li>La fonction retourne la matrice (mutation autorisée).</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>mirror_matrix([[1, 2], [3, 4], [5, 6]])</code></div><div class="ex-out"><code>[[2, 1], [4, 3], [6, 5]]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>mirror_matrix([[1, 2, 3], [4, 5, 6]])</code></div><div class="ex-out"><code>[[3, 2, 1], [6, 5, 4]]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>mirror_matrix([[1]])</code></div><div class="ex-out"><code>[[1]]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>mirror_matrix([[]])</code></div><div class="ex-out"><code>[[]]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>mirror_matrix([])</code></div><div class="ex-out"><code>[]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>On inverse <strong>chaque ligne</strong>, pas l'ordre des lignes elles-mêmes.</li>
+          <li><code>list.reverse()</code> modifie en place et renvoie <code>None</code> ; <code>list[::-1]</code> crée une nouvelle liste.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def mirror_matrix(matrix: list[list[int]]) -> list[list[int]]:
+    for arr in matrix:
+        arr.reverse()
+    return matrix
+
+
+print(mirror_matrix([[1, 2], [3, 4], [5, 6]]))</code></pre>
+      </details>
+    </section>
+
+    <!-- 11 twister -->
+    <section id="twister" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 11 / 11</div>
+        <h2>twister</h2>
+        <div class="meta">
+          <span class="badge"><code>py_twister.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui effectue une <strong>rotation circulaire vers la droite</strong>
+        d'une liste de <code>n</code> positions. Les éléments qui « sortent » par la droite
+        reviennent par la gauche.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def twister(nums: list, n: int) -> list:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Une liste vide retourne <code>[]</code>.</li>
+        <li><code>n</code> peut être supérieur à la longueur de la liste : utiliser le modulo.</li>
+        <li>Si <code>n == 0</code> (ou multiple de la longueur), retourner une <strong>copie</strong> de la liste.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>twister([1, 2, 3, 4, 5], 2)</code></div><div class="ex-out"><code>[4, 5, 1, 2, 3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>twister([1, 2, 3], 1)</code></div><div class="ex-out"><code>[3, 1, 2]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>twister([1, 2, 3, 4], 6)</code></div><div class="ex-out"><code>[3, 4, 1, 2]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>twister([1, 2, 3], 0)</code></div><div class="ex-out"><code>[1, 2, 3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>twister([], 5)</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>twister([7], 100)</code></div><div class="ex-out"><code>[7]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Toujours appliquer <code>n % len(nums)</code> pour éviter une rotation inutile.</li>
+          <li>Ne <strong>pas</strong> oublier de gérer la liste vide <em>avant</em> le modulo (division par zéro).</li>
+          <li>Utiliser <code>nums[:]</code> quand <code>n == 0</code> pour ne pas renvoyer la référence d'origine.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def twister(nums: list, n: int) -> list:
+    if not nums:
+        return []
+    n = n % len(nums)
+    return nums[-n:] + nums[:-n] if n else nums[:]</code></pre>
       </details>
     </section>
 
