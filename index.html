@@ -194,7 +194,7 @@
         <pre><code class="language-python">def cryptic_sorter(strings: list[str]) -> list[str]:
     def vowels(s):
         return sum(1 for c in s.lower() if c in "aeiou")
-    return sorted(strings, key=lambda s: (len(s), s.lower(), s, vowels(s)))
+    return sorted(strings, key=lambda s: (len(s), s.lower(), vowels(s)))
 
 
 cryptic_sorter(["hello", "world", "hi", "test"])</code></pre>
@@ -451,7 +451,7 @@ print(echo_validator("fd"))</code></pre>
         <pre><code class="language-python">def pattern_tracker(text: str) -> int:
     count = 0
     for i in range(len(text) - 1):
-        if text[i].isdigit() and text[i + 1].isdigit() and text[i] < text[i + 1]:
+        if text[i].isdigit() and text[i + 1].isdigit() and int(text[i + 1]) == int(text[i]) + 1:
             count += 1
     return count
 
