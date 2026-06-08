@@ -7,7 +7,7 @@ def cryptic_sorter(strings: list[str]) -> list[str]:
     def key_func(s):
         length = len(s)
         vowel_count = sum(1 for c in s if is_vowel(c))
-        return (length, s.lower(), s, vowel_count)
+        return (length, s.lower(), vowel_count)
 
     return sorted(strings, key=key_func)
 
@@ -228,7 +228,7 @@ Output: "ERROR"
 def pattern_tracker(text: str) -> int:
     count = 0
     for i in range(len(text) - 1):
-        if text[i].isdigit() and text[i + 1].isdigit() and text[i + 1] > text[i]:
+        if text[i].isdigit() and text[i + 1].isdigit() and int(text[i + 1]) == int(text[i]) + 1:
             count += 1
     return count
 
