@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exam Rank 03 — Révisions</title>
+  <title>Exam Rank 03 & 04 — Révisions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -17,29 +17,58 @@
 
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <div class="brand-mark"><img src="fda9a680842f322049f34f5ac228317e.jpg" alt="Avatar" /></div>
+      <div class="brand-mark"><img src="pfp.jpg" alt="Avatar" /></div>
       <div>
         <div class="brand-title">Exam Rank</div>
         <div class="brand-sub">Révisions · Python</div>
       </div>
     </div>
 
-    <nav class="nav">
-      <div class="nav-section">Démarrer</div>
-      <a class="nav-link" href="#accueil"><span class="nav-dot"></span>Accueil</a>
+    <div class="exam-switch" role="tablist" aria-label="Choisir l'exam">
+      <button class="exam-switch-btn" data-exam-target="03" role="tab">Rank 03</button>
+      <button class="exam-switch-btn" data-exam-target="04" role="tab">Rank 04</button>
+    </div>
 
-      <div class="nav-section">Exercices</div>
-      <a class="nav-link" href="#cryptic_sorter"><span class="nav-num">01</span>cryptic_sorter</a>
-      <a class="nav-link" href="#echo_validator"><span class="nav-num">02</span>echo_validator</a>
-      <a class="nav-link" href="#valid_parentheses"><span class="nav-num">03</span>valid_parentheses</a>
-      <a class="nav-link" href="#number_base_converter"><span class="nav-num">04</span>number_base_converter</a>
-      <a class="nav-link" href="#pattern_tracker"><span class="nav-num">05</span>pattern_tracker</a>
-      <a class="nav-link" href="#shadow_merge"><span class="nav-num">06</span>shadow_merge</a>
-      <a class="nav-link" href="#string_sculptor"><span class="nav-num">07</span>string_sculptor</a>
-      <a class="nav-link" href="#whisper_cipher"><span class="nav-num">08</span>whisper_cipher</a>
-      <a class="nav-link" href="#is_anagram"><span class="nav-num">09</span>is_anagram</a>
-      <a class="nav-link" href="#mirror_matrix"><span class="nav-num">10</span>mirror_matrix</a>
-      <a class="nav-link" href="#twister"><span class="nav-num">11</span>twister</a>
+    <nav class="nav">
+      <!-- ===== NAV EXAM 03 ===== -->
+      <div class="nav-group" data-exam="03">
+        <div class="nav-section">Démarrer</div>
+        <a class="nav-link" href="#accueil"><span class="nav-dot"></span>Accueil</a>
+
+        <div class="nav-section">Exercices · Rank 03</div>
+        <a class="nav-link" href="#cryptic_sorter"><span class="nav-num">01</span>cryptic_sorter</a>
+        <a class="nav-link" href="#echo_validator"><span class="nav-num">02</span>echo_validator</a>
+        <a class="nav-link" href="#valid_parentheses"><span class="nav-num">03</span>valid_parentheses</a>
+        <a class="nav-link" href="#number_base_converter"><span class="nav-num">04</span>number_base_converter</a>
+        <a class="nav-link" href="#pattern_tracker"><span class="nav-num">05</span>pattern_tracker</a>
+        <a class="nav-link" href="#shadow_merge"><span class="nav-num">06</span>shadow_merge</a>
+        <a class="nav-link" href="#string_sculptor"><span class="nav-num">07</span>string_sculptor</a>
+        <a class="nav-link" href="#whisper_cipher"><span class="nav-num">08</span>whisper_cipher</a>
+        <a class="nav-link" href="#is_anagram"><span class="nav-num">09</span>is_anagram</a>
+        <a class="nav-link" href="#mirror_matrix"><span class="nav-num">10</span>mirror_matrix</a>
+        <a class="nav-link" href="#twister"><span class="nav-num">11</span>twister</a>
+      </div>
+
+      <!-- ===== NAV EXAM 04 ===== -->
+      <div class="nav-group" data-exam="04">
+        <div class="nav-section">Démarrer</div>
+        <a class="nav-link" href="#accueil_04"><span class="nav-dot"></span>Accueil</a>
+
+        <div class="nav-section">Pool 1</div>
+        <a class="nav-link" href="#array_rotation_detector"><span class="nav-num">01</span>array_rotation_detector</a>
+        <a class="nav-link" href="#constellation_mapper"><span class="nav-num">02</span>constellation_mapper</a>
+
+        <div class="nav-section">Pool 2</div>
+        <a class="nav-link" href="#list_intersection_finder"><span class="nav-num">03</span>list_intersection_finder</a>
+        <a class="nav-link" href="#merge_sorted_lists"><span class="nav-num">04</span>merge_sorted_lists</a>
+
+        <div class="nav-section">Pool 3</div>
+        <a class="nav-link" href="#package_dependency_resolver"><span class="nav-num">05</span>package_dependency_resolver</a>
+        <a class="nav-link" href="#palindrome_partitioner"><span class="nav-num">06</span>palindrome_partitioner</a>
+
+        <div class="nav-section">Pool 4</div>
+        <a class="nav-link" href="#sliding_window_maximum"><span class="nav-num">07</span>sliding_window_maximum</a>
+      </div>
     </nav>
 
     <div class="theme-toggle">
@@ -52,6 +81,10 @@
   </aside>
 
   <main class="content">
+    <!-- ============================================================
+         EXAM RANK 03
+         ============================================================ -->
+    <div class="exam-content" data-exam="03">
     <!-- ACCUEIL -->
     <section id="accueil" class="page hero">
       <div class="eyebrow">Exam · Rank 03 · Python</div>
@@ -807,6 +840,544 @@ print(mirror_matrix([[1, 2], [3, 4], [5, 6]]))</code></pre>
     return nums[-n:] + nums[:-n] if n else nums[:]</code></pre>
       </details>
     </section>
+    </div><!-- /exam-content 03 -->
+
+    <!-- ============================================================
+         EXAM RANK 04
+         ============================================================ -->
+    <div class="exam-content" data-exam="04">
+    <!-- ACCUEIL 04 -->
+    <section id="accueil_04" class="page hero">
+      <div class="eyebrow">Exam · Rank 04 · Python</div>
+      <h1>
+        Sept exercices.<br>
+        <span class="serif italic">Quatre pools.</span>
+      </h1>
+      <p class="lede">
+        Le nouvel exam, réparti en quatre pools. Énoncés, exemples et solutions
+        pour chaque pioche possible.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#array_rotation_detector" class="btn btn-primary">Commencer →</a>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="#array_rotation_detector">
+          <div class="card-head"><span class="card-num">P1 · 01</span></div>
+          <span class="card-title">array_rotation_detector</span>
+          <span class="card-desc">Détection de rotation de tableau</span>
+        </a>
+        <a class="card" href="#constellation_mapper">
+          <div class="card-head"><span class="card-num">P1 · 02</span></div>
+          <span class="card-title">constellation_mapper</span>
+          <span class="card-desc">Grille d'étoiles à partir de coordonnées</span>
+        </a>
+        <a class="card" href="#list_intersection_finder">
+          <div class="card-head"><span class="card-num">P2 · 03</span></div>
+          <span class="card-title">list_intersection_finder</span>
+          <span class="card-desc">Intersection de plusieurs listes</span>
+        </a>
+        <a class="card" href="#merge_sorted_lists">
+          <div class="card-head"><span class="card-num">P2 · 04</span></div>
+          <span class="card-title">merge_sorted_lists</span>
+          <span class="card-desc">Fusion de N listes triées</span>
+        </a>
+        <a class="card" href="#package_dependency_resolver">
+          <div class="card-head"><span class="card-num">P3 · 05</span></div>
+          <span class="card-title">package_dependency_resolver</span>
+          <span class="card-desc">Tri topologique de dépendances</span>
+        </a>
+        <a class="card" href="#palindrome_partitioner">
+          <div class="card-head"><span class="card-num">P3 · 06</span></div>
+          <span class="card-title">palindrome_partitioner</span>
+          <span class="card-desc">Coupes minimales en palindromes</span>
+        </a>
+        <a class="card" href="#sliding_window_maximum">
+          <div class="card-head"><span class="card-num">P4 · 07</span></div>
+          <span class="card-title">sliding_window_maximum</span>
+          <span class="card-desc">Maximum sur fenêtre glissante</span>
+        </a>
+      </div>
+
+      <div class="tips">
+        <div class="tips-label">À savoir</div>
+        <h3>Un exo par pool — mais tu ne sais pas lequel</h3>
+        <ul>
+          <li><strong>L'exam tire un exercice par pool</strong> : révise les deux exos de chaque pool pour ne pas être pris au dépourvu.</li>
+          <li><strong>Lis les cas limites en commentaire</strong> : plusieurs énoncés listent explicitement les edge cases à gérer (entrée vide, doublons, négatifs…).</li>
+          <li><strong>Respecte la signature exacte</strong> et le nom du fichier — un typo = 0.</li>
+          <li><strong>Aucun import autorisé</strong> — les built-in restent permis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- P1·01 array_rotation_detector -->
+    <section id="array_rotation_detector" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Pool 1 · Exercice 01 / 07</div>
+        <h2>array_rotation_detector</h2>
+        <div class="meta">
+          <span class="badge"><code>py_array_rotation_detector.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui détermine si <code>arr2</code> est une <strong>rotation</strong> de
+        <code>arr1</code> — c'est-à-dire si on peut obtenir <code>arr2</code> en faisant « tourner »
+        circulairement les éléments de <code>arr1</code>.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def array_rotation_detector(arr1: list[int], arr2: list[int]) -> bool:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Des longueurs différentes impliquent forcément <code>False</code>.</li>
+        <li>Les deux tableaux doivent contenir exactement les mêmes éléments (mêmes occurrences).</li>
+        <li>Deux tableaux identiques sont une rotation valide (rotation de 0).</li>
+        <li>Deux tableaux vides retournent <code>True</code>.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>array_rotation_detector([1,2,3,4,5], [3,4,5,1,2])</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>array_rotation_detector([1,2,3,4,5], [4,5,1,2,3])</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>array_rotation_detector([1,2,3,4,5], [1,2,3,4,5])</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>array_rotation_detector([1,2,3], [1,3,2])</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>array_rotation_detector([1,2,3], [1,2])</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>array_rotation_detector([], [])</code></div><div class="ex-out"><code>True</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Vérifier d'abord la longueur, puis que les éléments triés sont identiques avant de chercher le décalage.</li>
+          <li>Astuce concise : <code>arr2</code> est une rotation de <code>arr1</code> si <code>arr2</code> est une sous-séquence contiguë de <code>arr1 + arr1</code>.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def array_rotation_detector(arr1: list[int], arr2: list[int]) -> bool:
+    if len(arr1) != len(arr2):
+        return False
+    if sorted(arr1) != sorted(arr2):
+        return False
+    if arr1 == arr2:
+        return True
+    i = 0
+    j = 0
+    while arr1[i] != arr2[j]:
+        j += 1
+    for i in range(0, len(arr1) - 1):
+        if j > len(arr2) - 1:
+            j = 0
+        if arr1[i] != arr2[j]:
+            return False
+        j += 1
+    return True
+
+
+print(array_rotation_detector([1, 2, 3, 4, 5], [3, 4, 5, 1, 2]))</code></pre>
+      </details>
+    </section>
+
+    <!-- P1·02 constellation_mapper -->
+    <section id="constellation_mapper" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Pool 1 · Exercice 02 / 07</div>
+        <h2>constellation_mapper</h2>
+        <div class="meta">
+          <span class="badge"><code>py_constellation_mapper.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui dessine une <strong>grille <code>size × size</code></strong>. Chaque
+        étoile est donnée par un couple de coordonnées <code>(ligne, colonne)</code> : on place un
+        <code>*</code> à sa position, et un <code>.</code> partout ailleurs. Le ciel est retourné
+        sous forme de liste de chaînes (une par ligne).
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def constellation_mapper(stars: list[tuple[int, int]], size: int) -> list[str]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Les coordonnées <strong>hors grille</strong> (≥ <code>size</code>) sont simplement ignorées.</li>
+        <li>Les étoiles en double sur la même case ne changent rien.</li>
+        <li>Le couple est <code>(y, x)</code> : la première valeur est la <strong>ligne</strong>.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>constellation_mapper([(0,0),(1,1),(2,2)], 3)</code></div><div class="ex-out"><code>['*..', '.*.', '..*']</code></div></div>
+        <div class="ex"><div class="ex-in"><code>constellation_mapper([(1,1),(0,1),(2,1),(1,0),(1,2)], 3)</code></div><div class="ex-out"><code>['.*.', '***', '.*.']</code></div></div>
+        <div class="ex"><div class="ex-in"><code>constellation_mapper([], 2)</code></div><div class="ex-out"><code>['..', '..']</code></div></div>
+        <div class="ex"><div class="ex-in"><code>constellation_mapper([(0,0),(5,5)], 3)</code></div><div class="ex-out"><code>['*..', '...', '...']</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Ne pas inverser <code>x</code> et <code>y</code> : on teste <code>(y, x) in stars</code> en parcourant ligne par ligne.</li>
+          <li>Pas besoin de filtrer les coordonnées hors grille : elles ne correspondront à aucune case visitée.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def constellation_mapper(stars: list[tuple[int, int]], size: int) -> list[str]:
+    sky = []
+    for y in range(size):
+        line = ""
+        for x in range(size):
+            if (y, x) in stars:
+                line += "*"
+            else:
+                line += "."
+        sky.append(line)
+    return sky
+
+
+print(constellation_mapper([(0, 0), (1, 1), (2, 2)], 3))</code></pre>
+      </details>
+    </section>
+
+    <!-- P2·03 list_intersection_finder -->
+    <section id="list_intersection_finder" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Pool 2 · Exercice 03 / 07</div>
+        <h2>list_intersection_finder</h2>
+        <div class="meta">
+          <span class="badge"><code>py_list_intersection_finder.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui retourne l'<strong>intersection</strong> de plusieurs listes :
+        les éléments présents dans <strong>toutes</strong> les listes, sans doublon, en conservant
+        l'ordre d'apparition dans la première liste.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def list_intersection_finder(lists: list[list[int]]) -> list[int]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Liste de listes vide → retourner <code>[]</code>.</li>
+        <li>Si une seule liste est fournie, la retourner telle quelle.</li>
+        <li>Une liste interne vide rend l'intersection vide.</li>
+        <li>Pas de doublon dans le résultat.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>list_intersection_finder([[1,2,3],[2,3,4],[2,3,5]])</code></div><div class="ex-out"><code>[2, 3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>list_intersection_finder([[1,2,3,4],[2,4,6,8],[4,8,12]])</code></div><div class="ex-out"><code>[4]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>list_intersection_finder([[1,2,3],[4,5,6]])</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>list_intersection_finder([[1,1,2,3],[1,2,2,3],[1,2,3,3]])</code></div><div class="ex-out"><code>[1, 2, 3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>list_intersection_finder([])</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>list_intersection_finder([[1,2,3],[]])</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>list_intersection_finder([[5]])</code></div><div class="ex-out"><code>[5]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Parcourir la première liste et garder un élément seulement s'il est présent dans <strong>toutes</strong> les autres.</li>
+          <li>Penser au <code>not in res</code> pour éviter les doublons quand la première liste en contient.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def list_intersection_finder(lists: list[list[int]]) -> list[int]:
+    res = []
+    if len(lists) == 0:
+        return res
+    if len(lists) == 1:
+        return lists[0]
+    for i in lists[0]:
+        flag = 0
+        for j in lists:
+            if i not in j:
+                flag = 1
+        if flag == 0 and i not in res:
+            res.append(i)
+    return res
+
+
+print(list_intersection_finder([[1, 2, 3], [2, 3, 4], [2, 3, 5]]))</code></pre>
+      </details>
+    </section>
+
+    <!-- P2·04 merge_sorted_lists -->
+    <section id="merge_sorted_lists" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Pool 2 · Exercice 04 / 07</div>
+        <h2>merge_sorted_lists</h2>
+        <div class="meta">
+          <span class="badge"><code>py_merge_sorted_lists.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui <strong>fusionne N listes triées</strong> d'entiers en une seule
+        liste triée par ordre croissant.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def merge_sorted_lists(lists: list[list[int]]) -> list[int]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Entrée vide (<code>[]</code>) → retourner <code>[]</code>.</li>
+        <li>Que des listes vides (<code>[[], []]</code>) → retourner <code>[]</code>.</li>
+        <li>Une seule liste → retourner une copie de cette liste.</li>
+        <li>Conserver tous les doublons ; gérer correctement les négatifs.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>merge_sorted_lists([[1,3,5],[2,4,6]])</code></div><div class="ex-out"><code>[1, 2, 3, 4, 5, 6]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>merge_sorted_lists([[5],[1,3],[2,4]])</code></div><div class="ex-out"><code>[1, 2, 3, 4, 5]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>merge_sorted_lists([[1,1,2],[2,3,3]])</code></div><div class="ex-out"><code>[1, 1, 2, 2, 3, 3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>merge_sorted_lists([[],[1,2,3]])</code></div><div class="ex-out"><code>[1, 2, 3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>merge_sorted_lists([])</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>merge_sorted_lists([[-5,-1,0],[-3,2,4]])</code></div><div class="ex-out"><code>[-5, -3, -1, 0, 2, 4]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>merge_sorted_lists([[10],[10],[10]])</code></div><div class="ex-out"><code>[10, 10, 10]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Tout aplatir puis <code>sorted()</code> suffit ici — la complexité n'est pas pénalisée.</li>
+          <li>Distinguer « liste de listes vide » et « listes internes toutes vides » : les deux donnent <code>[]</code>.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def merge_sorted_lists(lists: list[list[int]]) -> list[int]:
+    res = []
+    for sublist in lists:
+        for value in sublist:
+            res.append(value)
+    return sorted(res)
+
+
+print(merge_sorted_lists([[1, 3, 5], [2, 4, 6]]))</code></pre>
+      </details>
+    </section>
+
+    <!-- P3·05 package_dependency_resolver -->
+    <section id="package_dependency_resolver" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Pool 3 · Exercice 05 / 07</div>
+        <h2>package_dependency_resolver</h2>
+        <div class="meta">
+          <span class="badge"><code>py_package_dependency_resolver.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui résout un ordre d'installation de paquets à partir de leurs
+        dépendances (<strong>tri topologique</strong>). Un paquet ne peut être installé qu'après
+        toutes ses dépendances. À chaque étape, on installe les paquets prêts par
+        <strong>ordre alphabétique</strong>.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def package_dependency_resolver(packages: dict[str, list[str]]) -> list[str]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Entrée vide → retourner <code>[]</code>.</li>
+        <li>Les paquets sans dépendance sortent en premier.</li>
+        <li>Dépendances <strong>circulaires</strong> → retourner <code>[]</code>.</li>
+        <li>Auto-dépendance → retourner <code>[]</code>.</li>
+        <li>Une dépendance vers un paquet <strong>inexistant</strong> est ignorée.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>{"app":["database"], "database":["driver"], "driver":[]}</code></div><div class="ex-out"><code>['driver', 'database', 'app']</code></div></div>
+        <div class="ex"><div class="ex-in"><code>{"A":[], "B":["A"], "C":["A","B"]}</code></div><div class="ex-out"><code>['A', 'B', 'C']</code></div></div>
+        <div class="ex"><div class="ex-in"><code>{}</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>{"X":["Y"], "Y":["X"]}</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>{"web":[], "api":[], "frontend":["web"], "backend":["api"]}</code></div><div class="ex-out"><code>['api', 'web', 'backend', 'frontend']</code></div></div>
+        <div class="ex"><div class="ex-in"><code>{"A":["B"], "B":["C"], "C":["A"]}</code></div><div class="ex-out"><code>[]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>À chaque tour, sélectionner <strong>tous</strong> les paquets sans dépendance restante, triés alphabétiquement.</li>
+          <li>Si aucun paquet n'est prêt mais qu'il en reste → cycle → retourner <code>[]</code>.</li>
+          <li>Filtrer dès le départ les dépendances vers des paquets inexistants.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def package_dependency_resolver(packages: dict[str, list[str]]) -> list[str]:
+    deps = {p: [d for d in packages[p] if d in packages] for p in packages}
+    res = []
+    while deps:
+        ready = sorted([p for p, d in deps.items() if not d])
+        if not ready:
+            return []
+        for p in ready:
+            res.append(p)
+            del deps[p]
+        for p in deps:
+            deps[p] = [d for d in deps[p] if d in deps]
+    return res
+
+
+print(package_dependency_resolver({"app": ["database"], "database": ["driver"], "driver": []}))</code></pre>
+      </details>
+    </section>
+
+    <!-- P3·06 palindrome_partitioner -->
+    <section id="palindrome_partitioner" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Pool 3 · Exercice 06 / 07</div>
+        <h2>palindrome_partitioner</h2>
+        <div class="meta">
+          <span class="badge"><code>py_palindrome_partitioner.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui retourne le <strong>nombre minimum de coupes</strong> nécessaires
+        pour partitionner une chaîne en sous-chaînes qui sont <strong>toutes des palindromes</strong>.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def palindrome_partitioner(s: str) -> int:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Chaîne vide → <code>0</code>.</li>
+        <li>Si la chaîne est déjà un palindrome → <code>0</code> coupe.</li>
+        <li>On compte les <strong>coupes</strong>, pas le nombre de morceaux (<code>k</code> morceaux = <code>k-1</code> coupes).</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>palindrome_partitioner("aab")</code></div><div class="ex-out"><code>1</code></div></div>
+        <div class="ex"><div class="ex-in"><code>palindrome_partitioner("aba")</code></div><div class="ex-out"><code>0</code></div></div>
+        <div class="ex"><div class="ex-in"><code>palindrome_partitioner("abcba")</code></div><div class="ex-out"><code>0</code></div></div>
+        <div class="ex"><div class="ex-in"><code>palindrome_partitioner("abcd")</code></div><div class="ex-out"><code>3</code></div></div>
+        <div class="ex"><div class="ex-in"><code>palindrome_partitioner("abac")</code></div><div class="ex-out"><code>1</code></div></div>
+        <div class="ex"><div class="ex-in"><code>palindrome_partitioner("")</code></div><div class="ex-out"><code>0</code></div></div>
+        <div class="ex"><div class="ex-in"><code>palindrome_partitioner("baabaacd")</code></div><div class="ex-out"><code>3</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Programmation dynamique : <code>dp[i]</code> = nombre min de coupes pour <code>s[0..i]</code>.</li>
+          <li>Si <code>s[j..i]</code> est un palindrome, alors <code>dp[i] = 0</code> si <code>j == 0</code>, sinon <code>min(dp[i], dp[j-1] + 1)</code>.</li>
+          <li>Tester le palindrome avec <code>s[j:i+1] == s[j:i+1][::-1]</code>.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def palindrome_partitioner(s: str) -> int:
+    if not s:
+        return 0
+    n = len(s)
+    dp = list(range(n))
+    for i in range(n):
+        for j in range(i + 1):
+            if s[j:i+1] == s[j:i+1][::-1]:
+                dp[i] = 0 if j == 0 else min(dp[i], dp[j-1] + 1)
+    return dp[-1]
+
+
+print(palindrome_partitioner("baabaacd"))</code></pre>
+      </details>
+    </section>
+
+    <!-- P4·07 sliding_window_maximum -->
+    <section id="sliding_window_maximum" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Pool 4 · Exercice 07 / 07</div>
+        <h2>sliding_window_maximum</h2>
+        <div class="meta">
+          <span class="badge"><code>py_sliding_window_maximum.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui fait glisser une <strong>fenêtre de taille <code>k</code></strong> sur
+        le tableau et retourne, pour chaque position, le <strong>maximum</strong> de la fenêtre.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def sliding_window_maximum(nums: list[int], k: int) -> list[int]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Tableau vide → retourner <code>[]</code>.</li>
+        <li><code>k &lt;= 0</code> ou <code>k &gt; len(nums)</code> → entrée invalide → retourner <code>[]</code>.</li>
+        <li>Il y a <code>len(nums) - k + 1</code> positions de fenêtre.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>sliding_window_maximum([1,3,-1,-3,5,3,6,7], 3)</code></div><div class="ex-out"><code>[3, 3, 5, 5, 6, 7]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>sliding_window_maximum([1,2,3,4,5], 2)</code></div><div class="ex-out"><code>[2, 3, 4, 5]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>sliding_window_maximum([5,4,3,2,1], 1)</code></div><div class="ex-out"><code>[5, 4, 3, 2, 1]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>sliding_window_maximum([1,2,3], 3)</code></div><div class="ex-out"><code>[3]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>sliding_window_maximum([1,2,3], 4)</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>sliding_window_maximum([], 2)</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>sliding_window_maximum([1,2,3], 0)</code></div><div class="ex-out"><code>[]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li>Valider les entrées <strong>avant</strong> de boucler : <code>k &lt;= 0</code>, <code>k &gt; len(nums)</code>, tableau vide.</li>
+          <li>Approche simple : pour chaque indice de départ <code>i</code>, calculer <code>max(nums[i:i+k])</code>.</li>
+          <li>Ne pas oublier la dernière fenêtre (boucle jusqu'à <code>len(nums) - k</code> inclus).</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def sliding_window_maximum(nums: list[int], k: int) -> list[int]:
+    res = []
+    if not nums or k <= 0 or k > len(nums):
+        return res
+    for i in range(len(nums) - k + 1):
+        res.append(max(nums[i:i + k]))
+    return res
+
+
+print(sliding_window_maximum([1, 3, -1, -3, 5, 3, 6, 7], 3))</code></pre>
+      </details>
+    </section>
+    </div><!-- /exam-content 04 -->
 
     <footer class="footer">
       <div class="footer-deco">— · —</div>

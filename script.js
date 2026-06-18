@@ -21,6 +21,26 @@ themeBtn.addEventListener('click', () => {
   applyTheme(current === 'dark' ? 'light' : 'dark');
 });
 
+// Exam switcher (Rank 03 / Rank 04)
+const examScopes = document.querySelectorAll('[data-exam]');
+const examButtons = document.querySelectorAll('.exam-switch-btn');
+
+function applyExam(exam) {
+  examScopes.forEach(el => el.classList.toggle('is-inactive', el.dataset.exam !== exam));
+  examButtons.forEach(b => b.classList.toggle('active', b.dataset.examTarget === exam));
+  localStorage.setItem('exam', exam);
+}
+
+const savedExam = localStorage.getItem('exam') || '03';
+applyExam(savedExam);
+
+examButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyExam(btn.dataset.examTarget);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
 // Sidebar mobile toggle
 const sidebar = document.getElementById('sidebar');
 const menuToggle = document.getElementById('menuToggle');
