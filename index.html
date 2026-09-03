@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exam Rank 03 & 04 — Révisions</title>
+  <title>Exam Rank 03, 04 & 05 — Révisions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -27,6 +27,7 @@
     <div class="exam-switch" role="tablist" aria-label="Choisir l'exam">
       <button class="exam-switch-btn" data-exam-target="03" role="tab">Rank 03</button>
       <button class="exam-switch-btn" data-exam-target="04" role="tab">Rank 04</button>
+      <button class="exam-switch-btn" data-exam-target="05" role="tab">Rank 05</button>
     </div>
 
     <nav class="nav">
@@ -68,6 +69,22 @@
 
         <div class="nav-section">Pool 4</div>
         <a class="nav-link" href="#sliding_window_maximum"><span class="nav-num">07</span>sliding_window_maximum</a>
+      </div>
+
+      <!-- ===== NAV EXAM 05 ===== -->
+      <div class="nav-group" data-exam="05">
+        <div class="nav-section">Démarrer</div>
+        <a class="nav-link" href="#accueil_05"><span class="nav-dot"></span>Accueil</a>
+
+        <div class="nav-section">Exercices officiels</div>
+        <a class="nav-link" href="#py_prism_detector"><span class="nav-num">01</span>prism_detector</a>
+        <a class="nav-link" href="#py_graph_cycle_detector"><span class="nav-num">02</span>graph_cycle_detector</a>
+        <a class="nav-link" href="#py_nebula_compressor"><span class="nav-num">03</span>nebula_compressor</a>
+        <a class="nav-link" href="#py_meeting_room_scheduler"><span class="nav-num">04</span>meeting_room_scheduler</a>
+
+        <div class="nav-section">Entraînement</div>
+        <a class="nav-link" href="#matrix"><span class="nav-num">05</span>spiral_matrix</a>
+        <a class="nav-link" href="#word_ladder"><span class="nav-num">06</span>word_ladder</a>
       </div>
     </nav>
 
@@ -1378,6 +1395,650 @@ print(sliding_window_maximum([1, 3, -1, -3, 5, 3, 6, 7], 3))</code></pre>
       </details>
     </section>
     </div><!-- /exam-content 04 -->
+
+    <!-- ============================================================
+         EXAM RANK 05
+         ============================================================ -->
+    <div class="exam-content" data-exam="05">
+    <!-- ACCUEIL 05 -->
+    <section id="accueil_05" class="page hero">
+      <div class="eyebrow">Exam · Rank 05 · Python</div>
+      <h1>
+        Quatre exercices.<br>
+        <span class="serif italic">Deux bonus.</span>
+      </h1>
+      <p class="lede">
+        Les quatre énoncés officiels, plus deux exercices d'entraînement
+        aux attentes identiques. Énoncés, exemples et solutions commentées.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#py_prism_detector" class="btn btn-primary">Commencer →</a>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="#py_prism_detector">
+          <div class="card-head"><span class="card-num">01</span></div>
+          <span class="card-title">prism_detector</span>
+          <span class="card-desc">Motif dans une grille, 8 directions</span>
+        </a>
+        <a class="card" href="#py_graph_cycle_detector">
+          <div class="card-head"><span class="card-num">02</span></div>
+          <span class="card-title">graph_cycle_detector</span>
+          <span class="card-desc">Cycle dans un graphe orienté</span>
+        </a>
+        <a class="card" href="#py_nebula_compressor">
+          <div class="card-head"><span class="card-num">03</span></div>
+          <span class="card-title">nebula_compressor</span>
+          <span class="card-desc">Compression RLE et décompression</span>
+        </a>
+        <a class="card" href="#py_meeting_room_scheduler">
+          <div class="card-head"><span class="card-num">04</span></div>
+          <span class="card-title">meeting_room_scheduler</span>
+          <span class="card-desc">Affectation minimale de salles</span>
+        </a>
+        <a class="card" href="#matrix">
+          <div class="card-head"><span class="card-num">05</span></div>
+          <span class="card-title">spiral_matrix</span>
+          <span class="card-desc">Entraînement · parcours en spirale</span>
+        </a>
+        <a class="card" href="#word_ladder">
+          <div class="card-head"><span class="card-num">06</span></div>
+          <span class="card-title">word_ladder</span>
+          <span class="card-desc">Entraînement · plus court chemin BFS</span>
+        </a>
+      </div>
+
+      <div class="tips">
+        <div class="tips-label">À savoir</div>
+        <h3>Quatre officiels, deux entraînements</h3>
+        <ul>
+          <li><strong>Les exos 01 à 04 sont les énoncés officiels</strong> — nom de fichier et signature à respecter au caractère près.</li>
+          <li><strong>Les exos 05 et 06 ne sont pas à l'exam</strong> : ce sont des classiques (LeetCode 54 et 127) qui préparent aux mêmes attentes.</li>
+          <li><strong>Aucun import autorisé</strong> — les built-in restent permis.</li>
+          <li><strong>Les cas limites sont explicites dans les énoncés</strong> : entrée vide, motif vide, graphe vide, opération invalide. Traite-les en premier.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 01 py_prism_detector -->
+    <section id="py_prism_detector" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 01 / 06</div>
+        <h2>prism_detector</h2>
+        <div class="meta">
+          <span class="badge"><code>py_prism_detector.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui trouve <strong>toutes les occurrences d'un motif</strong> dans une
+        grille 2D (une liste de chaînes). La recherche se fait dans les <strong>8 directions</strong> :
+        horizontale, verticale et les deux diagonales, chacune dans les deux sens. Chaque occurrence
+        est rendue sous forme de tuple <code>(ligne, colonne, code_direction)</code> où la position
+        est celle du <strong>départ</strong> du motif.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def prism_detector(grid: list[str], pattern: str) -> list[tuple[int, int, str]]:</code></pre>
+
+      <h3>Codes de direction</h3>
+      <ul>
+        <li><code>"H"</code> horizontale gauche → droite · <code>"H-"</code> droite → gauche</li>
+        <li><code>"V"</code> verticale haut → bas · <code>"V-"</code> bas → haut</li>
+        <li><code>"D1"</code> diagonale haut-gauche → bas-droite · <code>"D1-"</code> le sens inverse</li>
+        <li><code>"D2"</code> diagonale haut-droite → bas-gauche · <code>"D2-"</code> le sens inverse</li>
+      </ul>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Grille vide ou motif vide → retourner <code>[]</code>.</li>
+        <li>Aucune occurrence trouvée → retourner <code>[]</code>.</li>
+        <li>L'ordre de sortie suit la <strong>ligne</strong>, puis la <strong>colonne</strong>, puis le <strong>code de direction</strong> dans l'ordre listé ci-dessus.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>prism_detector(["ABC","DEF","GHI"], "ADG")</code></div><div class="ex-out"><code>[(0, 0, "V")]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>prism_detector(["XYZ","ABC","DEF"], "XBF")</code></div><div class="ex-out"><code>[(0, 0, "D1")]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>prism_detector([], "ABC")</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>prism_detector(["ABC"], "")</code></div><div class="ex-out"><code>[]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Déclare la liste des 8 directions dans l'ordre de l'énoncé</strong> : en la parcourant dans cet ordre à l'intérieur des boucles ligne/colonne, le résultat sort déjà trié — aucun tri final nécessaire.</li>
+          <li>Force brute assumée : pour chaque case <code>(r, c)</code> et chaque direction <code>(dr, dc)</code>, avance de <code>i * dr</code> / <code>i * dc</code> et compare lettre à lettre.</li>
+          <li><strong>Teste les bornes avant d'indexer.</strong> Les indices négatifs ne lèvent pas d'erreur en Python — ils repartent de la fin et fausseraient silencieusement le résultat.</li>
+          <li><strong>Borne la colonne avec <code>len(grid[rr])</code>, pas avec <code>len(grid[0])</code></strong> : si les lignes n'ont pas toutes la même longueur, la largeur de la première ligne ne vaut rien pour les autres et tu prends un <code>IndexError</code>.</li>
+          <li>Un motif d'<strong>un seul caractère</strong> correspond dans les 8 directions à la fois : chaque case trouvée sort donc 8 fois. C'est la lecture cohérente de l'énoncé, mais garde-le en tête.</li>
+          <li>Attention : l'énoncé donne <code>prism_detector(["HELLO","WORLD"], "LL") → [(0, 2, "H")]</code>, mais une recherche complète dans les 8 directions en trouve 6 (dont <code>(0, 2, "D1")</code> et <code>(0, 3, "H-")</code>). L'exemple de l'énoncé est incomplet — garde l'implémentation exhaustive.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">DIRECTIONS = [
+    (0, 1, "H"),
+    (0, -1, "H-"),
+    (1, 0, "V"),
+    (-1, 0, "V-"),
+    (1, 1, "D1"),
+    (-1, -1, "D1-"),
+    (1, -1, "D2"),
+    (-1, 1, "D2-"),
+]
+
+
+def prism_detector(grid: list[str], pattern: str) -> list[tuple[int, int, str]]:
+    if not grid or not pattern:
+        return []
+
+    rows = len(grid)
+    plen = len(pattern)
+    resultats = []
+
+    for r in range(rows):
+        for c in range(len(grid[r])):
+            for dr, dc, code in DIRECTIONS:
+                match = True
+                for i in range(plen):
+                    rr = r + i * dr
+                    cc = c + i * dc
+                    if rr &lt; 0 or rr &gt;= rows:
+                        match = False
+                        break
+                    if cc &lt; 0 or cc &gt;= len(grid[rr]):
+                        match = False
+                        break
+                    if grid[rr][cc] != pattern[i]:
+                        match = False
+                        break
+                if match:
+                    resultats.append((r, c, code))
+
+    return resultats
+
+
+print(prism_detector(["ABC", "DEF", "GHI"], "ADG"))</code></pre>
+      </details>
+    </section>
+
+    <!-- 02 py_graph_cycle_detector -->
+    <section id="py_graph_cycle_detector" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 02 / 06</div>
+        <h2>graph_cycle_detector</h2>
+        <div class="meta">
+          <span class="badge"><code>py_graph_cycle_detector.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui détecte si un <strong>graphe orienté contient un cycle</strong>.
+        Le graphe est donné sous forme de <strong>liste d'adjacence</strong> : un dictionnaire dont
+        les clés sont les nœuds et les valeurs la liste des nœuds vers lesquels ils pointent.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def graph_cycle_detector(graph: dict[int, list[int]]) -> bool:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Retourner <code>True</code> s'il existe un cycle, <code>False</code> sinon.</li>
+        <li>Graphe vide → <code>False</code>.</li>
+        <li>Une <strong>boucle sur soi-même</strong> (<code>{0: [0]}</code>) compte comme un cycle.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>graph_cycle_detector({0: [1], 1: [2], 2: [0]})</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>graph_cycle_detector({0: [1], 1: [2], 2: []})</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>graph_cycle_detector({0: [1, 2], 1: [3], 2: [3], 3: []})</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>graph_cycle_detector({0: [0]})</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>graph_cycle_detector({})</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>graph_cycle_detector({0: [1], 1: [2], 2: [3], 3: [1]})</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>graph_cycle_detector({0: [], 1: [], 2: []})</code></div><div class="ex-out"><code>False</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Méthode sans récursion (Kahn)</strong> : compte le <em>degré entrant</em> de chaque nœud, mets en file ceux à 0, traite-les en décrémentant leurs voisins. Si tous les nœuds ont été traités → pas de cycle ; s'il en reste → cycle.</li>
+          <li><strong>Recense d'abord tous les nœuds</strong>, clés <em>et</em> valeurs : un nœud peut apparaître uniquement comme destination (<code>{0: [1]}</code> sans clé <code>1</code>) et <code>graph[voisin]</code> lèverait alors un <code>KeyError</code>. Utilise <code>graph.get(noeud, [])</code>.</li>
+          <li>La boucle sur soi-même tombe juste toute seule : <code>{0: [0]}</code> donne un degré entrant de 1 dès le départ, le nœud n'est jamais traité → cycle.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def graph_cycle_detector(graph: dict[int, list[int]]) -> bool:
+    noeuds = set(graph.keys())
+    for voisins in graph.values():
+        for voisin in voisins:
+            noeuds.add(voisin)
+
+    degre_entrant = {}
+    for noeud in noeuds:
+        degre_entrant[noeud] = 0
+
+    for noeud in graph:
+        for voisin in graph[noeud]:
+            degre_entrant[voisin] += 1
+
+    file = []
+    for noeud in noeuds:
+        if degre_entrant[noeud] == 0:
+            file.append(noeud)
+
+    traites = 0
+    tete = 0
+    while tete &lt; len(file):
+        noeud = file[tete]
+        tete += 1
+        traites += 1
+        for voisin in graph.get(noeud, []):
+            degre_entrant[voisin] -= 1
+            if degre_entrant[voisin] == 0:
+                file.append(voisin)
+
+    return traites != len(noeuds)
+
+
+print(graph_cycle_detector({0: [1], 1: [2], 2: [0]}))</code></pre>
+      </details>
+    </section>
+
+    <!-- 03 py_nebula_compressor -->
+    <section id="py_nebula_compressor" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 03 / 06</div>
+        <h2>nebula_compressor</h2>
+        <div class="meta">
+          <span class="badge"><code>py_nebula_compressor.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui implémente la <strong>compression par plages</strong>
+        (<em>run-length encoding</em>) <strong>et</strong> sa décompression. Le premier argument
+        choisit l'opération : <code>"compress"</code> ou <code>"decompress"</code>.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def nebula_compressor(operation: str, data: str) -> str:</code></pre>
+
+      <h3>Règles de compression</h3>
+      <ul>
+        <li>Un caractère qui n'apparaît <strong>qu'une fois</strong> est laissé tel quel.</li>
+        <li>De <strong>2 à 9 occurrences</strong> consécutives → <code>caractère + nombre</code>.</li>
+        <li><strong>10 occurrences ou plus</strong> → découper en paquets de 9 (<code>13 × "a"</code> → <code>"a9a4"</code>).</li>
+      </ul>
+
+      <h3>Règles de décompression</h3>
+      <ul>
+        <li><code>caractère + chiffre</code> → répéter le caractère ce nombre de fois.</li>
+        <li>Un caractère non suivi d'un chiffre reste seul.</li>
+      </ul>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Opération inconnue → retourner <code>"Error"</code>.</li>
+        <li>Chaîne vide → retourner <code>""</code> (dans les deux sens).</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("compress", "aaabbc")</code></div><div class="ex-out"><code>"a3b2c"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("compress", "hello")</code></div><div class="ex-out"><code>"hel2o"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("compress", "aaaaaaaaaaaaa")</code></div><div class="ex-out"><code>"a9a4"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("compress", "abcdef")</code></div><div class="ex-out"><code>"abcdef"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("decompress", "a3b2c")</code></div><div class="ex-out"><code>"aaabbc"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("decompress", "hel2o")</code></div><div class="ex-out"><code>"hello"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("decompress", "a9a4")</code></div><div class="ex-out"><code>"aaaaaaaaaaaaa"</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("compress", "")</code></div><div class="ex-out"><code>""</code></div></div>
+        <div class="ex"><div class="ex-in"><code>nebula_compressor("invalid", "test")</code></div><div class="ex-out"><code>"Error"</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Le paquet de 9 se vide en premier</strong> : tant qu'il reste plus de 9 occurrences, écris <code>caractère + "9"</code> et retire 9. C'est seulement <em>ensuite</em> qu'on décide si le reste vaut 1 (caractère seul) ou 2-9 (caractère + nombre).</li>
+          <li><strong>Ne confonds pas 1 et 0</strong> : après le découpage, un reste de 1 s'écrit <code>"a"</code>, jamais <code>"a1"</code> — sinon <code>"a9a4"</code> deviendrait <code>"a9a1"</code> sur 10 caractères.</li>
+          <li>En décompression, <code>data[i + 1].isdigit()</code> doit être protégé par <code>i + 1 &lt; len(data)</code>, sinon dernier caractère = <code>IndexError</code>.</li>
+          <li>L'opération invalide se teste dans le <code>else</code> final — pas au début, sinon tu dupliques la logique.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def nebula_compressor(operation: str, data: str) -> str:
+    resultat = ""
+
+    if operation == "compress":
+        i = 0
+        while i &lt; len(data):
+            caractere = data[i]
+            longueur = 1
+            while (i + longueur &lt; len(data)
+                    and data[i + longueur] == caractere):
+                longueur += 1
+
+            restant = longueur
+            while restant &gt; 9:
+                resultat += caractere + "9"
+                restant -= 9
+
+            if restant == 1:
+                resultat += caractere
+            else:
+                resultat += caractere + str(restant)
+
+            i += longueur
+
+    elif operation == "decompress":
+        i = 0
+        while i &lt; len(data):
+            caractere = data[i]
+            if i + 1 &lt; len(data) and data[i + 1].isdigit():
+                nombre = int(data[i + 1])
+                resultat += caractere * nombre
+                i += 2
+            else:
+                resultat += caractere
+                i += 1
+
+    else:
+        return "Error"
+
+    return resultat
+
+
+print(nebula_compressor("compress", "aaabbc"))</code></pre>
+      </details>
+    </section>
+
+    <!-- 04 py_meeting_room_scheduler -->
+    <section id="py_meeting_room_scheduler" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 04 / 06</div>
+        <h2>meeting_room_scheduler</h2>
+        <div class="meta">
+          <span class="badge"><code>py_meeting_room_scheduler.py</code></span>
+          <span class="badge">Aucun import autorisé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui détermine le <strong>nombre minimum de salles</strong> nécessaires
+        pour planifier toutes les réunions, et qui retourne <strong>l'affectation</strong> de chaque
+        réunion à sa salle. Les réunions sont données sous la forme <code>[début, fin]</code>, la
+        <strong>fin étant exclue</strong> — une réunion qui finit à 10 et une qui commence à 10
+        tiennent dans la même salle.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def meeting_room_scheduler(meetings: list[list[int]]) -> dict[str, any]:</code></pre>
+
+      <h3>Format de retour</h3>
+      <pre><code class="language-python">{
+    "rooms_needed": int,
+    "room_assignments": dict[int, list[list[int]]]  # id de salle -> réunions
+}</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Liste vide → <code>{"rooms_needed": 0, "room_assignments": {}}</code>.</li>
+        <li>Les réunions qui se chevauchent doivent aller dans des salles distinctes.</li>
+        <li>Les salles sont numérotées à partir de <code>0</code>.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>meeting_room_scheduler([[0,30],[5,10],[15,20]])</code></div><div class="ex-out"><code>{"rooms_needed": 2, "room_assignments": {0: [[0,30]], 1: [[5,10],[15,20]]}}</code></div></div>
+        <div class="ex"><div class="ex-in"><code>meeting_room_scheduler([[9,10],[9,12],[11,13]])</code></div><div class="ex-out"><code>{"rooms_needed": 2, "room_assignments": {0: [[9,10],[11,13]], 1: [[9,12]]}}</code></div></div>
+        <div class="ex"><div class="ex-in"><code>meeting_room_scheduler([[1,5],[8,9],[8,9]])</code></div><div class="ex-out"><code>{"rooms_needed": 2, "room_assignments": {0: [[1,5],[8,9]], 1: [[8,9]]}}</code></div></div>
+        <div class="ex"><div class="ex-in"><code>meeting_room_scheduler([])</code></div><div class="ex-out"><code>{"rooms_needed": 0, "room_assignments": {}}</code></div></div>
+        <div class="ex"><div class="ex-in"><code>meeting_room_scheduler([[1,2],[3,4],[5,6]])</code></div><div class="ex-out"><code>{"rooms_needed": 1, "room_assignments": {0: [[1,2],[3,4],[5,6]]}}</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Trie par heure de début, puis remplis gloutonnement</strong> : pour chaque réunion, parcours les salles déjà ouvertes dans l'ordre et prends la première libre ; si aucune ne l'est, ouvre une salle. Ça suffit à atteindre le minimum.</li>
+          <li><strong>La fin est exclue</strong> : la salle est libre si <code>reunions[-1][1] &lt;= debut</code> — avec <code>&lt;</code> strict, <code>[9,10]</code> et <code>[10,12]</code> occuperaient deux salles à tort.</li>
+          <li>Il suffit de comparer avec la <strong>dernière</strong> réunion de la salle : comme tout est trié par début, c'est elle qui finit le plus tard.</li>
+          <li>Ne trie pas les salles par heure de fin : on cherche seulement s'il <em>existe</em> une salle libre, peu importe laquelle.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def meeting_room_scheduler(meetings: list[list[int]]) -> dict[str, any]:
+    if not meetings:
+        return {"rooms_needed": 0, "room_assignments": {}}
+
+    meetings = sorted(meetings, key=lambda m: m[0])
+    room_assignments: dict[int, list[list[int]]] = {}
+
+    for debut, fin in meetings:
+        placee = False
+        for reunions in room_assignments.values():
+            if reunions[-1][1] &lt;= debut:
+                reunions.append([debut, fin])
+                placee = True
+                break
+        if not placee:
+            room_assignments[len(room_assignments)] = [[debut, fin]]
+
+    return {
+        "rooms_needed": len(room_assignments),
+        "room_assignments": room_assignments,
+    }
+
+
+print(meeting_room_scheduler([[0, 30], [5, 10], [15, 20]]))</code></pre>
+      </details>
+    </section>
+
+    <!-- 05 matrix (entraînement) -->
+    <section id="matrix" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 05 / 06 · Entraînement</div>
+        <h2>spiral_matrix</h2>
+        <div class="meta">
+          <span class="badge"><code>matrix.py</code></span>
+          <span class="badge">Pas à l'exam</span>
+        </div>
+      </header>
+
+      <div class="hint">
+        <div class="hint-label">Attention</div>
+        <ul>
+          <li>Cet exercice <strong>n'est pas l'officiel</strong> : il sert d'entraînement pour un exercice similaire (LeetCode 54 — <em>Spiral Matrix</em>).</li>
+        </ul>
+      </div>
+
+      <h3>Énoncé</h3>
+      <p>
+        Étant donné une matrice de taille <code>m × n</code>, retourner <strong>tous les éléments
+        de la matrice dans l'ordre spirale</strong> : la ligne du haut de gauche à droite, puis la
+        colonne de droite de haut en bas, puis la ligne du bas de droite à gauche, puis la colonne
+        de gauche de bas en haut, et on recommence en resserrant.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def spiral_order(matrix: list[list[int]]) -> list[int]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li><code>m == len(matrix)</code>, <code>n == len(matrix[0])</code>, avec <code>1 &lt;= m, n &lt;= 10</code>.</li>
+        <li><code>-100 &lt;= matrix[i][j] &lt;= 100</code>.</li>
+        <li>La matrice n'est pas forcément carrée.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>spiral_order([[1,2,3],[4,5,6],[7,8,9]])</code></div><div class="ex-out"><code>[1, 2, 3, 6, 9, 8, 7, 4, 5]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>spiral_order([[1,2,3,4],[5,6,7,8],[9,10,11,12]])</code></div><div class="ex-out"><code>[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>spiral_order([])</code></div><div class="ex-out"><code>[]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Méthode des 4 bornes</strong>, à retenir par cœur : <code>haut</code>, <code>bas</code>, <code>gauche</code>, <code>droite</code> se resserrent après chaque passage. Boucle tant que <code>haut &lt;= bas and gauche &lt;= droite</code>.</li>
+          <li><strong>Les étapes 3 et 4 doivent être protégées par un <code>if</code></strong> : sur une matrice non carrée, il peut ne plus rester de ligne (<code>haut &lt;= bas</code>) ou de colonne (<code>gauche &lt;= droite</code>) à ce moment-là — sans ces gardes, des éléments sont comptés deux fois.</li>
+          <li>Teste aussi <code>matrix[0]</code> et pas seulement <code>matrix</code> : une matrice <code>[[]]</code> n'est pas vide au sens de <code>not matrix</code>.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def spiral_order(matrix: list[list[int]]) -> list[int]:
+    if not matrix or not matrix[0]:
+        return []
+
+    haut = 0
+    bas = len(matrix) - 1
+    gauche = 0
+    droite = len(matrix[0]) - 1
+    resultat = []
+
+    while haut &lt;= bas and gauche &lt;= droite:
+        for c in range(gauche, droite + 1):
+            resultat.append(matrix[haut][c])
+        haut += 1
+
+        for r in range(haut, bas + 1):
+            resultat.append(matrix[r][droite])
+        droite -= 1
+
+        if haut &lt;= bas:
+            for c in range(droite, gauche - 1, -1):
+                resultat.append(matrix[bas][c])
+            bas -= 1
+
+        if gauche &lt;= droite:
+            for r in range(bas, haut - 1, -1):
+                resultat.append(matrix[r][gauche])
+            gauche += 1
+
+    return resultat
+
+
+print(spiral_order([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))</code></pre>
+      </details>
+    </section>
+
+    <!-- 06 word_ladder (entraînement) -->
+    <section id="word_ladder" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Exercice 06 / 06 · Entraînement</div>
+        <h2>word_ladder</h2>
+        <div class="meta">
+          <span class="badge"><code>word_ladder.py</code></span>
+          <span class="badge">Pas à l'exam</span>
+        </div>
+      </header>
+
+      <div class="hint">
+        <div class="hint-label">Attention</div>
+        <ul>
+          <li>Cet exercice <strong>n'est pas l'officiel</strong>, mais il comporte les <strong>mêmes attentes</strong> que celui de l'exam (LeetCode 127 — <em>Word Ladder</em>).</li>
+        </ul>
+      </div>
+
+      <h3>Énoncé</h3>
+      <p>
+        Une séquence de transformation de <code>beginWord</code> vers <code>endWord</code> à l'aide
+        d'un dictionnaire <code>wordList</code> est une suite
+        <code>beginWord → s1 → s2 → … → sk</code> telle que chaque paire de mots adjacents ne diffère
+        que d'<strong>une seule lettre</strong>, que chaque <code>si</code> est présent dans
+        <code>wordList</code>, et que <code>sk == endWord</code>. Retourne le <strong>nombre de mots
+        de la séquence la plus courte</strong>, ou <code>0</code> si aucune n'existe.
+      </p>
+      <p>
+        Note : <code>beginWord</code> n'a pas besoin d'être dans <code>wordList</code>.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def word_ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li><code>1 &lt;= len(beginWord) &lt;= 10</code> et <code>len(endWord) == len(beginWord)</code>.</li>
+        <li><code>1 &lt;= len(wordList) &lt;= 5000</code>, tous les mots ont la même longueur et sont uniques.</li>
+        <li>Uniquement des lettres minuscules ; <code>beginWord != endWord</code>.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>word_ladder_length("hit", "cog", ["hot","dot","dog","lot","log","cog"])</code></div><div class="ex-out"><code>5</code></div></div>
+        <div class="ex"><div class="ex-in"><code>word_ladder_length("hit", "cog", ["hot","dot","dog","lot","log"])</code></div><div class="ex-out"><code>0</code></div></div>
+      </div>
+      <p>
+        Pour le premier exemple, la séquence la plus courte est
+        <code>"hit" → "hot" → "dot" → "dog" → "cog"</code>, soit 5 mots. Dans le second,
+        <code>"cog"</code> est absent de <code>wordList</code> : aucune séquence valide.
+      </p>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>C'est un BFS, pas un DFS</strong> : on veut le chemin le <em>plus court</em>, donc le premier moment où on atteint <code>endWord</code> est forcément l'optimal.</li>
+          <li><strong>Court-circuite si <code>endWord</code> n'est pas dans le dictionnaire</strong> — sinon tu explores tout le graphe pour rien.</li>
+          <li><strong>Retire chaque mot du set dès que tu l'enfiles</strong>, pas au moment où tu le dépiles : sans ça, le même mot est ajouté plusieurs fois et l'exploration explose.</li>
+          <li>Pour les voisins : change chaque lettre par les 25 autres et teste l'appartenance au <code>set</code> — bien plus rapide que de comparer le mot à tout le dictionnaire.</li>
+          <li>On compte des <strong>mots</strong>, pas des transitions : la file démarre à <code>(begin_word, 1)</code>.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">ALPHABET = "abcdefghijklmnopqrstuvwxyz"
+
+
+def word_ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:
+    mots_dispo = set(word_list)
+    if end_word not in mots_dispo:
+        return 0
+
+    file = [(begin_word, 1)]
+    tete = 0
+    mots_dispo.discard(begin_word)
+
+    while tete &lt; len(file):
+        mot, longueur = file[tete]
+        tete += 1
+
+        if mot == end_word:
+            return longueur
+
+        for i in range(len(mot)):
+            for lettre in ALPHABET:
+                if lettre == mot[i]:
+                    continue
+                voisin = mot[:i] + lettre + mot[i + 1:]
+                if voisin in mots_dispo:
+                    mots_dispo.discard(voisin)
+                    file.append((voisin, longueur + 1))
+
+    return 0
+
+
+print(word_ladder_length("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))</code></pre>
+      </details>
+    </section>
+    </div><!-- /exam-content 05 -->
 
     <footer class="footer">
       <div class="footer-deco">— · —</div>
