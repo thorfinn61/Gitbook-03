@@ -76,19 +76,21 @@
         <div class="nav-section">Démarrer</div>
         <a class="nav-link" href="#accueil_05"><span class="nav-dot"></span>Accueil</a>
 
-        <div class="nav-section">Listes &amp; chaînes</div>
-        <a class="nav-link" href="#chunk_array"><span class="nav-num">01</span>chunk_array</a>
-        <a class="nav-link" href="#py_compress_decompress"><span class="nav-num">02</span>compress_decompress</a>
+        <div class="nav-section">Niveau 1</div>
+        <a class="nav-link" href="#py_compress_decompress"><span class="nav-num">01</span>compress_decompress</a>
+        <a class="nav-link" href="#py_spiral_matrix"><span class="nav-num">02</span>spiral_matrix</a>
+        <a class="nav-link" href="#py_room_scheduler"><span class="nav-num">03</span>room_scheduler</a>
 
-        <div class="nav-section">Grilles 2D</div>
-        <a class="nav-link" href="#py_spiral_matrix"><span class="nav-num">03</span>spiral_matrix</a>
-        <a class="nav-link" href="#py_prism_detector"><span class="nav-num">04</span>prism_detector</a>
+        <div class="nav-section">Niveau 2</div>
+        <a class="nav-link" href="#py_graph_cycle_detector"><span class="nav-num">04</span>graph_cycle_detector</a>
         <a class="nav-link" href="#py_island_matrix_counter"><span class="nav-num">05</span>island_matrix_counter</a>
 
-        <div class="nav-section">Intervalles &amp; graphes</div>
-        <a class="nav-link" href="#py_schedule_meetings"><span class="nav-num">06</span>schedule_meetings</a>
-        <a class="nav-link" href="#py_graph_cycle_detector"><span class="nav-num">07</span>graph_cycle_detector</a>
-        <a class="nav-link" href="#py_word_ladder"><span class="nav-num">08</span>word_ladder</a>
+        <div class="nav-section">Niveau 3</div>
+        <a class="nav-link" href="#py_prism_detector"><span class="nav-num">06</span>prism_detector</a>
+        <a class="nav-link" href="#py_word_ladder"><span class="nav-num">07</span>word_ladder</a>
+
+        <div class="nav-section">Bonus</div>
+        <a class="nav-link" href="#chunk_array"><span class="nav-num">08</span>chunk_array</a>
       </div>
     </nav>
 
@@ -1408,158 +1410,82 @@ print(sliding_window_maximum([1, 3, -1, -3, 5, 3, 6, 7], 3))</code></pre>
     <section id="accueil_05" class="page hero">
       <div class="eyebrow">Exam · Rank 05 · Python</div>
       <h1>
-        Huit exercices.<br>
-        <span class="serif italic">Trois familles.</span>
+        Sept exercices.<br>
+        <span class="serif italic">Trois niveaux.</span>
       </h1>
       <p class="lede">
-        Les huit sujets du repo <code>exam_rank_05</code>, regroupés par thème : listes et chaînes,
-        grilles 2D, intervalles et graphes. Énoncés, exemples et solutions commentées.
+        Un exercice tiré au hasard à chaque niveau. Pools reconstitués à partir de deux repos
+        (My_EXAM05 et exam_rank_05), plus un exercice bonus. Énoncés, exemples et solutions commentées.
       </p>
 
       <div class="hero-cta">
-        <a href="#chunk_array" class="btn btn-primary">Commencer →</a>
+        <a href="#py_compress_decompress" class="btn btn-primary">Commencer →</a>
       </div>
 
       <div class="grid">
-        <a class="card" href="#chunk_array">
-          <div class="card-head"><span class="card-num">01</span></div>
-          <span class="card-title">chunk_array</span>
-          <span class="card-desc">Rangées de taille fixe, complétées par None</span>
-        </a>
         <a class="card" href="#py_compress_decompress">
-          <div class="card-head"><span class="card-num">02</span></div>
+          <div class="card-head"><span class="card-num">N1 · 01</span></div>
           <span class="card-title">compress_decompress</span>
           <span class="card-desc">Compression par plages et retour</span>
         </a>
         <a class="card" href="#py_spiral_matrix">
-          <div class="card-head"><span class="card-num">03</span></div>
+          <div class="card-head"><span class="card-num">N1 · 02</span></div>
           <span class="card-title">spiral_matrix</span>
           <span class="card-desc">Remplir une matrice n × n en spirale</span>
         </a>
-        <a class="card" href="#py_prism_detector">
-          <div class="card-head"><span class="card-num">04</span></div>
-          <span class="card-title">prism_detector</span>
-          <span class="card-desc">Mot dans une grille, 8 directions</span>
-        </a>
-        <a class="card" href="#py_island_matrix_counter">
-          <div class="card-head"><span class="card-num">05</span></div>
-          <span class="card-title">island_matrix_counter</span>
-          <span class="card-desc">Compter les îles d'une grille</span>
-        </a>
-        <a class="card" href="#py_schedule_meetings">
-          <div class="card-head"><span class="card-num">06</span></div>
-          <span class="card-title">schedule_meetings</span>
+        <a class="card" href="#py_room_scheduler">
+          <div class="card-head"><span class="card-num">N1 · 03</span></div>
+          <span class="card-title">room_scheduler</span>
           <span class="card-desc">Nombre minimal de salles de réunion</span>
         </a>
         <a class="card" href="#py_graph_cycle_detector">
-          <div class="card-head"><span class="card-num">07</span></div>
+          <div class="card-head"><span class="card-num">N2 · 04</span></div>
           <span class="card-title">graph_cycle_detector</span>
           <span class="card-desc">Cycle dans un graphe orienté</span>
         </a>
+        <a class="card" href="#py_island_matrix_counter">
+          <div class="card-head"><span class="card-num">N2 · 05</span></div>
+          <span class="card-title">island_matrix_counter</span>
+          <span class="card-desc">Compter les îles d'une grille</span>
+        </a>
+        <a class="card" href="#py_prism_detector">
+          <div class="card-head"><span class="card-num">N3 · 06</span></div>
+          <span class="card-title">prism_detector</span>
+          <span class="card-desc">Mot dans une grille, 8 directions</span>
+        </a>
         <a class="card" href="#py_word_ladder">
-          <div class="card-head"><span class="card-num">08</span></div>
+          <div class="card-head"><span class="card-num">N3 · 07</span></div>
           <span class="card-title">word_ladder</span>
           <span class="card-desc">Plus courte échelle de mots</span>
+        </a>
+        <a class="card" href="#chunk_array">
+          <div class="card-head"><span class="card-num">Bonus</span></div>
+          <span class="card-title">chunk_array</span>
+          <span class="card-desc">Rangées de taille fixe, complétées par None</span>
         </a>
       </div>
 
       <div class="tips">
         <div class="tips-label">À savoir</div>
-        <h3>Ce qu'il faut retenir</h3>
+        <h3>Un exo par niveau, mais tu ne sais pas lequel</h3>
         <ul>
-          <li><strong>Respecte la signature de l'énoncé au caractère près</strong> : nom de fonction, paramètres et type de retour (tuple ou liste). Une correction du repo s'en écarte (<code>chunkArray</code> au lieu de <code>crate_rows</code>) : c'est l'énoncé qui compte.</li>
-          <li><strong>Aucun import dans les solutions</strong> : les énoncés n'interdisent explicitement que <code>graphlib.TopologicalSorter</code>, mais tout est écrit sans import et passe même si la moulinette est plus stricte.</li>
-          <li><strong>Pas de récursion sur les grilles et les graphes</strong> : Python s'arrête vers 1000 appels imbriqués. Une pile ou une file explicite évite le <code>RecursionError</code> sur une grande entrée.</li>
-          <li><strong>Traite les cas limites en premier</strong> : liste vide, <code>n &lt;= 0</code>, motif vide, graphe vide.</li>
+          <li><strong>L'exam tire un exercice dans le pool de chaque niveau</strong> : révise tous les exos d'un niveau pour ne pas être pris au dépourvu. Niveau 1 : 3 exos, niveau 2 : 2, niveau 3 : 2.</li>
+          <li><strong>Les niveaux viennent de My_EXAM05</strong>, qui range ses sujets en <code>level1</code> / <code>level2</code> / <code>level3</code>. exam_rank_05 contient les mêmes sujets, sans niveaux, plus <code>chunk_array</code> (mis en bonus).</li>
+          <li><strong>room_scheduler existe en deux versions</strong> (dictionnaire ou tuple) : les deux sont sur la page, avec leur solution.</li>
+          <li><strong>Respecte la signature de l'énoncé au caractère près</strong> : nom de fonction, paramètres et type de retour.</li>
+          <li><strong>Solutions sans import ni récursion</strong> : Python s'arrête vers 1000 appels imbriqués, et les corrections récursives des deux repos plantent sur les grandes grilles.</li>
         </ul>
       </div>
     </section>
 
-    <!-- 01 chunk_array -->
-    <section id="chunk_array" class="page">
-      <header class="page-head">
-        <div class="page-eyebrow">Exercice 01 / 08</div>
-        <h2>chunk_array</h2>
-        <div class="meta">
-          <span class="badge"><code>chunk_array.py</code></span>
-          <span class="badge">Listes</span>
-        </div>
-      </header>
-
-      <h3>Énoncé</h3>
-      <p>
-        De retour au port, Bob décharge les caisses une par une et les aligne sur le quai en
-        <strong>rangées d'exactement <code>n</code></strong>. Quand le bateau est vide au milieu
-        d'une rangée, il marque les emplacements restants à la craie avec <code>None</code> pour que
-        la rangée compte quand même <code>n</code> positions.
-      </p>
-      <p>
-        Étant donné les caisses dans l'ordre de déchargement et la taille de rangée <code>n</code>,
-        retourne le quai sous forme de <strong>liste de rangées</strong>. Si <code>n</code> vaut zéro
-        ou est négatif, Bob refuse de travailler : retourne une liste vide.
-      </p>
-
-      <h3>Signature</h3>
-      <pre><code class="language-python">def crate_rows(items: list, n: int) -&gt; list[list]:</code></pre>
-
-      <h3>Contraintes</h3>
-      <ul>
-        <li>Découper en rangées d'exactement <code>n</code>, en <strong>gardant l'ordre d'origine</strong>.</li>
-        <li>Si la dernière rangée est incomplète, compléter les cases manquantes avec <code>None</code>.</li>
-        <li><code>n</code> égal à 0 ou négatif → <code>[]</code>.</li>
-        <li>Liste vide → <code>[]</code>.</li>
-        <li>La liste d'entrée <strong>ne doit pas être modifiée</strong>.</li>
-      </ul>
-
-      <h3>Exemples</h3>
-      <div class="examples">
-        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 4, 5], 2)</code></div><div class="ex-out"><code>[[1, 2], [4, 5]]</code></div></div>
-        <div class="ex"><div class="ex-in"><code>crate_rows(["seeds", "pots", "soil", "tools", "rope"], 3)</code></div><div class="ex-out"><code>[["seeds", "pots", "soil"], ["tools", "rope", None]]</code></div></div>
-        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 3, 4, 5, 6, 7], 3)</code></div><div class="ex-out"><code>[[1, 2, 3], [4, 5, 6], [7, None, None]]</code></div></div>
-        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 3], 0)</code></div><div class="ex-out"><code>[]</code></div></div>
-        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 3], -2)</code></div><div class="ex-out"><code>[]</code></div></div>
-        <div class="ex"><div class="ex-in"><code>crate_rows([], 4)</code></div><div class="ex-out"><code>[]</code></div></div>
-      </div>
-
-      <div class="hint">
-        <div class="hint-label">Pièges courants</div>
-        <ul>
-          <li><strong>Teste <code>n &lt;= 0</code> avant tout</strong> : <code>range(0, len(items), 0)</code> lève un <code>ValueError</code> (un pas de 0 est interdit).</li>
-          <li><strong>Le slicing crée une copie</strong> : <code>items[i:i + n]</code> est une nouvelle liste, tu peux y ajouter des <code>None</code> sans toucher à <code>items</code>. N'appelle jamais <code>append</code> sur <code>items</code> lui-même.</li>
-          <li>Seule la <strong>dernière</strong> rangée peut être incomplète : sur les autres, la boucle <code>while len(rangee) &lt; n</code> ne tourne pas.</li>
-          <li>La liste vide n'a pas besoin d'un cas spécial : <code>range(0, 0, n)</code> est vide et on retourne <code>[]</code>.</li>
-          <li>La correction du repo nomme la fonction <code>chunkArray(arr, size)</code>, mais l'énoncé impose <strong><code>crate_rows(items, n)</code></strong> : c'est l'énoncé qui fait foi.</li>
-        </ul>
-      </div>
-
-      <details class="solution">
-        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
-        <pre><code class="language-python">def crate_rows(items: list, n: int) -&gt; list[list]:
-    if n &lt;= 0:
-        return []
-
-    rangees = []
-    for i in range(0, len(items), n):
-        rangee = items[i:i + n]
-        while len(rangee) &lt; n:
-            rangee.append(None)
-        rangees.append(rangee)
-
-    return rangees
-
-
-print(crate_rows(["seeds", "pots", "soil", "tools", "rope"], 3))</code></pre>
-      </details>
-    </section>
-
-    <!-- 02 py_compress_decompress -->
+    <!-- 01 py_compress_decompress -->
     <section id="py_compress_decompress" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 02 / 08</div>
+        <div class="page-eyebrow">Niveau 1 · Exercice 01 / 07</div>
         <h2>compress_decompress</h2>
         <div class="meta">
           <span class="badge"><code>py_compress_decompress.py</code></span>
-          <span class="badge">Chaînes</span>
+          <span class="badge">Confirmé par les 2 repos</span>
         </div>
       </header>
 
@@ -1601,10 +1527,11 @@ def decompress(s: str) -&gt; str:</code></pre>
       <div class="hint">
         <div class="hint-label">Pièges courants</div>
         <ul>
-          <li><strong>Nombres à plusieurs chiffres</strong> : en décompression, accumule les chiffres tant que <code>s[i].isdigit()</code>. Lire un seul chiffre transformerait <code>"a12"</code> en <code>"a2"</code>.</li>
-          <li><strong>Pas de découpage par paquets de 9</strong> : contrairement à d'autres variantes de cet exo, 12 <code>"a"</code> s'écrivent <code>"a12"</code>. <code>str(compte)</code> suffit.</li>
-          <li>Protège chaque lecture par <code>i &lt; len(s)</code> : le dernier caractère n'a pas forcément de nombre derrière.</li>
-          <li>La chaîne vide passe toute seule dans les deux sens : la boucle ne tourne pas et on retourne <code>""</code>.</li>
+          <li><strong>Compter une suite</strong> : <code>count</code> part de 1 et avance tant que <code>s[i + count] == s[i]</code>. Ensuite <code>i += count</code> saute directement à la suite suivante.</li>
+          <li><strong>Nombres à plusieurs chiffres</strong> : en décompression, accumule les chiffres dans <code>digits</code> tant que <code>s[i].isdigit()</code>. Lire un seul chiffre transformerait <code>"a12"</code> en <code>"a2"</code>.</li>
+          <li><strong><code>int(digits or 1)</code></strong> : si aucun chiffre ne suit, <code>digits</code> vaut <code>""</code>, et <code>"" or 1</code> donne <code>1</code>. Une seule ligne gère les deux cas.</li>
+          <li><strong>Pas de découpage par paquets de 9</strong> : contrairement à d'autres variantes de cet exo, 12 <code>"a"</code> s'écrivent <code>"a12"</code>. <code>str(count)</code> suffit.</li>
+          <li>Chaque lecture est protégée par une borne (<code>i + count &lt; len(s)</code>, <code>i &lt; len(s)</code>) : le dernier caractère n'a pas forcément de nombre derrière.</li>
           <li>L'énoncé ne prévoit pas de chiffres dans le texte d'origine : <code>compress("a2")</code> donne <code>"a2"</code>, que <code>decompress</code> relit comme <code>"aa"</code>. Inutile de le gérer.</li>
         </ul>
       </div>
@@ -1612,40 +1539,29 @@ def decompress(s: str) -&gt; str:</code></pre>
       <details class="solution">
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
         <pre><code class="language-python">def compress(s: str) -&gt; str:
-    resultat = ""
+    result = ""
     i = 0
     while i &lt; len(s):
-        caractere = s[i]
-        compte = 0
-        while i &lt; len(s) and s[i] == caractere:
-            compte += 1
-            i += 1
-
-        resultat += caractere
-        if compte &gt; 1:
-            resultat += str(compte)
-
-    return resultat
+        count = 1
+        while i + count &lt; len(s) and s[i + count] == s[i]:
+            count += 1
+        result += s[i] + (str(count) if count &gt; 1 else "")
+        i += count
+    return result
 
 
 def decompress(s: str) -&gt; str:
-    resultat = ""
+    result = ""
     i = 0
     while i &lt; len(s):
-        caractere = s[i]
+        char = s[i]
         i += 1
-
-        nombre = ""
+        digits = ""
         while i &lt; len(s) and s[i].isdigit():
-            nombre += s[i]
+            digits += s[i]
             i += 1
-
-        if nombre == "":
-            resultat += caractere
-        else:
-            resultat += caractere * int(nombre)
-
-    return resultat
+        result += char * int(digits or 1)
+    return result
 
 
 print(compress("aabcccccaaa"))
@@ -1653,14 +1569,14 @@ print(decompress("a2bc5a3"))</code></pre>
       </details>
     </section>
 
-    <!-- 03 py_spiral_matrix -->
+    <!-- 02 py_spiral_matrix -->
     <section id="py_spiral_matrix" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 03 / 08</div>
+        <div class="page-eyebrow">Niveau 1 · Exercice 02 / 07</div>
         <h2>spiral_matrix</h2>
         <div class="meta">
           <span class="badge"><code>py_spiral_matrix.py</code></span>
-          <span class="badge">Grille 2D</span>
+          <span class="badge">Confirmé par les 2 repos</span>
         </div>
       </header>
 
@@ -1692,11 +1608,12 @@ print(decompress("a2bc5a3"))</code></pre>
       <div class="hint">
         <div class="hint-label">Pièges courants</div>
         <ul>
-          <li><strong>Jamais <code>[[0] * n] * n</code></strong> : ça crée <code>n</code> références vers <em>la même</em> ligne, et chaque écriture se répercute sur toutes les lignes. Construis chaque ligne séparément.</li>
-          <li><strong>Méthode des 4 bornes</strong> : <code>haut</code>, <code>bas</code>, <code>gauche</code>, <code>droite</code>. Après chaque côté, la borne correspondante se resserre. C'est le squelette de la lecture en spirale (LeetCode 54), sauf qu'ici on écrit au lieu de lire.</li>
-          <li>Chaque côté démarre sur la borne <strong>déjà mise à jour</strong> (<code>haut += 1</code> avant de descendre, etc.) : sinon le coin est écrit deux fois.</li>
-          <li>Pour <code>n</code> impair, la case du centre est remplie par le premier côté du dernier tour ; les trois autres boucles sont vides. Rien à gérer à part.</li>
-          <li>Vérification rapide : la dernière valeur écrite doit être <code>n * n</code>.</li>
+          <li><strong>Méthode du serpent</strong> : écris le nombre, regarde la case suivante ; si elle sort de la grille ou est déjà remplie, tourne à droite. Une seule règle, pas de bornes à suivre.</li>
+          <li><strong>Tourner à droite = <code>dr, dc = dc, -dr</code></strong> : droite <code>(0, 1)</code> → bas <code>(1, 0)</code> → gauche <code>(0, -1)</code> → haut <code>(-1, 0)</code> → droite.</li>
+          <li><strong>Jamais <code>[[0] * n] * n</code></strong> : ça crée <code>n</code> références vers <em>la même</em> ligne, et chaque écriture se répercute sur toutes les lignes. La compréhension <code>[[0] * n for _ in range(n)]</code> crée des lignes distinctes.</li>
+          <li><strong><code>0</code> marque une case vide</strong> : ça marche parce qu'on écrit à partir de 1.</li>
+          <li><strong>Garde <code>n &lt;= 0</code></strong> : sans elle, <code>n = -2</code> donne <code>n * n = 4</code> tours de boucle sur une grille vide → <code>IndexError</code>.</li>
+          <li>Autres méthodes : 4 bornes qui se resserrent (exam_rank_05), ou grille remplie de <code>"*"</code> (My_EXAM05, qui plante sur <code>n = 0</code>).</li>
         </ul>
       </div>
 
@@ -1705,53 +1622,277 @@ print(decompress("a2bc5a3"))</code></pre>
         <pre><code class="language-python">def generate_spiral(n: int) -&gt; list[list[int]]:
     if n &lt;= 0:
         return []
-
-    matrice = []
-    for _ in range(n):
-        matrice.append([0] * n)
-
-    haut = 0
-    bas = n - 1
-    gauche = 0
-    droite = n - 1
-    nombre = 1
-
-    while haut &lt;= bas and gauche &lt;= droite:
-        for c in range(gauche, droite + 1):
-            matrice[haut][c] = nombre
-            nombre += 1
-        haut += 1
-
-        for r in range(haut, bas + 1):
-            matrice[r][droite] = nombre
-            nombre += 1
-        droite -= 1
-
-        for c in range(droite, gauche - 1, -1):
-            matrice[bas][c] = nombre
-            nombre += 1
-        bas -= 1
-
-        for r in range(bas, haut - 1, -1):
-            matrice[r][gauche] = nombre
-            nombre += 1
-        gauche += 1
-
-    return matrice
+    matrix = [[0] * n for _ in range(n)]
+    r, c, dr, dc = 0, 0, 0, 1
+    for num in range(1, n * n + 1):
+        matrix[r][c] = num
+        nr, nc = r + dr, c + dc
+        if not (0 &lt;= nr &lt; n and 0 &lt;= nc &lt; n and matrix[nr][nc] == 0):
+            dr, dc = dc, -dr
+        r, c = r + dr, c + dc
+    return matrix
 
 
 print(generate_spiral(3))</code></pre>
       </details>
     </section>
 
-    <!-- 04 py_prism_detector -->
+    <!-- 03 py_room_scheduler -->
+    <section id="py_room_scheduler" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Niveau 1 · Exercice 03 / 07</div>
+        <h2>room_scheduler</h2>
+        <div class="meta">
+          <span class="badge"><code>py_room_scheduler.py</code></span>
+          <span class="badge"><code>py_schedule_meetings.py</code></span>
+          <span class="badge">2 versions de l'énoncé</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui détermine le <strong>nombre minimum de salles</strong> nécessaires pour
+        planifier une liste de réunions sans chevauchement, et qui <strong>affecte chaque réunion à une
+        salle</strong> : trier les réunions par heure de début, puis les placer dans l'ordre dans les
+        salles disponibles.
+      </p>
+      <p>
+        <strong>Deux versions de cet énoncé circulent</strong> : celle de My_EXAM05 et celle
+        d'exam_rank_05. L'algorithme est le même, seuls le nom de la fonction et les formats d'entrée
+        et de sortie changent. Lis bien le tien le jour J.
+      </p>
+
+      <h3>Version A — dictionnaire (My_EXAM05)</h3>
+      <p>Fichier <code>py_room_scheduler.py</code>. Chaque réunion est une liste <code>[début, fin]</code>.</p>
+      <pre><code class="language-python">def py_room_scheduler(meetings: list[list[int]]) -&gt; dict:</code></pre>
+      <ul>
+        <li>Retourne un dictionnaire : <code>"total_rooms"</code> (nombre de salles) et <code>"schedule"</code> (liste des réunions de chaque salle).</li>
+        <li>Liste vide → <code>{"total_rooms": 0, "schedule": []}</code>.</li>
+      </ul>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>py_room_scheduler([[0, 30], [5, 10], [15, 20]])</code></div><div class="ex-out"><code>{"total_rooms": 2, "schedule": [[[0, 30]], [[5, 10], [15, 20]]]}</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_room_scheduler([[15, 20], [0, 30], [5, 10]])</code></div><div class="ex-out"><code>{"total_rooms": 2, "schedule": [[[0, 30]], [[5, 10], [15, 20]]]}</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_room_scheduler([[0, 10], [5, 15], [10, 20]])</code></div><div class="ex-out"><code>{"total_rooms": 2, "schedule": [[[0, 10], [10, 20]], [[5, 15]]]}</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_room_scheduler([])</code></div><div class="ex-out"><code>{"total_rooms": 0, "schedule": []}</code></div></div>
+      </div>
+
+      <h3>Version B — tuple (exam_rank_05)</h3>
+      <p>Fichier <code>py_schedule_meetings.py</code>. Chaque réunion est un tuple <code>(début, fin)</code>.</p>
+      <pre><code class="language-python">def schedule_meetings(intervals: list[tuple[int, int]]) -&gt; tuple[int, list]:</code></pre>
+      <ul>
+        <li>Retourne un tuple <code>(nb_salles, salles)</code>, où <code>salles</code> est la liste des réunions de chaque salle.</li>
+        <li>Liste vide → <code>(0, [])</code>.</li>
+      </ul>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>schedule_meetings([(0, 30), (5, 10), (15, 20)])</code></div><div class="ex-out"><code>(2, [[(0, 30)], [(5, 10), (15, 20)]])</code></div></div>
+        <div class="ex"><div class="ex-in"><code>schedule_meetings([(0, 10), (5, 15), (10, 20)])</code></div><div class="ex-out"><code>(2, [[(0, 10), (10, 20)], [(5, 15)]])</code></div></div>
+        <div class="ex"><div class="ex-in"><code>schedule_meetings([(9, 10), (10, 12)])</code></div><div class="ex-out"><code>(1, [[(9, 10), (10, 12)]])</code></div></div>
+        <div class="ex"><div class="ex-in"><code>schedule_meetings([])</code></div><div class="ex-out"><code>(0, [])</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Trie par heure de début, puis remplis gloutonnement</strong> : pour chaque réunion, prends la première salle libre ; si aucune ne l'est, ouvre une nouvelle salle. Ce glouton atteint le minimum, et la liste vide donne <code>rooms = []</code> sans cas spécial.</li>
+          <li><strong><code>for … else</code></strong> : le <code>else</code> d'une boucle <code>for</code> ne s'exécute que si la boucle s'est terminée <em>sans</em> <code>break</code>, c'est-à-dire si aucune salle n'était libre. Ça remplace un drapeau <code>placed = True/False</code>.</li>
+          <li><strong>Teste toutes les salles ouvertes, pas seulement la dernière</strong> : la correction de My_EXAM05 ne regarde que la dernière salle ouverte et se trompe dans environ la moitié des cas. <code>[[0, 10], [5, 15], [10, 20]]</code> lui donne 3 salles au lieu de 2, alors que la salle 0 est libre dès 10.</li>
+          <li><strong>Une salle est libre si sa dernière réunion finit avant le début, ou pile au début</strong> : <code>room[-1][1] &lt;= meeting[0]</code>. Avec <code>&lt;</code> strict, <code>(9, 10)</code> et <code>(10, 12)</code> occuperaient deux salles.</li>
+          <li>Comparer avec la <strong>dernière</strong> réunion de la salle suffit : comme tout est trié par début, c'est elle qui finit le plus tard.</li>
+          <li><strong>Ne modifie pas l'entrée</strong> : <code>sorted(...)</code> renvoie une nouvelle liste, alors que <code>meetings.sort()</code> (correction de My_EXAM05) réordonne la liste de l'appelant.</li>
+          <li><strong>Pas de <code>Any</code> sans import</strong> : My_EXAM05 écrit <code>-&gt; dict[str, Any]</code> sans <code>from typing import Any</code>, ce qui lève un <code>NameError</code> avant Python 3.14. <code>-&gt; dict</code> suffit.</li>
+          <li><strong>Respecte le format de ta version</strong> : <code>(2, [...])</code>, <code>[2, [...]]</code> et <code>{"total_rooms": 2, ...}</code> ne sont pas égaux en Python.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution · Version A</span></summary>
+        <pre><code class="language-python">def py_room_scheduler(meetings: list[list[int]]) -&gt; dict:
+    rooms = []
+    for meeting in sorted(meetings, key=lambda m: m[0]):
+        for room in rooms:
+            if room[-1][1] &lt;= meeting[0]:
+                room.append(meeting)
+                break
+        else:
+            rooms.append([meeting])
+    return {"total_rooms": len(rooms), "schedule": rooms}
+
+
+print(py_room_scheduler([[0, 30], [5, 10], [15, 20]]))</code></pre>
+      </details>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution · Version B</span></summary>
+        <pre><code class="language-python">def schedule_meetings(intervals: list[tuple[int, int]]) -&gt; tuple[int, list]:
+    rooms = []
+    for meeting in sorted(intervals, key=lambda m: m[0]):
+        for room in rooms:
+            if room[-1][1] &lt;= meeting[0]:
+                room.append(meeting)
+                break
+        else:
+            rooms.append([meeting])
+    return (len(rooms), rooms)
+
+
+print(schedule_meetings([(0, 30), (5, 10), (15, 20)]))</code></pre>
+      </details>
+    </section>
+
+    <!-- 04 py_graph_cycle_detector -->
+    <section id="py_graph_cycle_detector" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Niveau 2 · Exercice 04 / 07</div>
+        <h2>graph_cycle_detector</h2>
+        <div class="meta">
+          <span class="badge"><code>py_graph_cycle_detector.py</code></span>
+          <span class="badge">Confirmé par les 2 repos</span>
+          <span class="badge"><code>graphlib</code> interdit</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction qui détermine si un <strong>graphe orienté contient au moins un cycle</strong>.
+        Le graphe est donné sous forme de <strong>liste d'adjacence</strong> : un dictionnaire dont les
+        clés sont les identifiants (entiers) des nœuds et les valeurs la liste des voisins vers lesquels
+        ils pointent.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def py_graph_cycle_detector(graph: dict[int, list[int]]) -&gt; bool:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Retourner <code>True</code> s'il existe un cycle.</li>
+        <li>Retourner <code>False</code> si le graphe est acyclique ou si le dictionnaire est vide.</li>
+        <li>Gérer correctement les graphes à <strong>plusieurs composantes</strong> non connectées.</li>
+        <li><code>graphlib.TopologicalSorter</code> est interdit : l'algorithme doit être écrit à la main.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [2], 2: [0]})</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [2], 2: []})</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({})</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1, 2], 1: [3], 2: [3], 3: []})</code></div><div class="ex-out"><code>False</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [0]})</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [2], 2: [3], 3: [1]})</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [], 2: [3], 3: [2]})</code></div><div class="ex-out"><code>True</code></div></div>
+        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [], 1: [], 2: []})</code></div><div class="ex-out"><code>False</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Attention au nom</strong> : la fonction s'appelle <code>py_graph_cycle_detector</code>, avec le préfixe <code>py_</code>.</li>
+          <li><strong>Idée</strong> : partir de tous les nœuds et avancer d'un pas à la fois (<code>current</code> = les nœuds atteints). Sans cycle, tous les chemins finissent par s'arrêter et <code>current</code> se vide. Avec un cycle, on peut tourner en rond : <code>current</code> ne se vide jamais.</li>
+          <li><strong>Pourquoi <code>len(graph) + 1</code> pas suffisent</strong> : un chemin aussi long passe par plus de nœuds qu'il n'y a de clés, donc il repasse forcément par un nœud déjà vu → cycle.</li>
+          <li><strong><code>graph.get(node, [])</code></strong> : un nœud peut n'apparaître que comme destination (<code>{0: [1]}</code> sans clé <code>1</code>), et <code>graph[node]</code> lèverait un <code>KeyError</code>.</li>
+          <li>Tout le reste tombe juste tout seul : composantes séparées (on part de tous les nœuds), boucle sur soi-même (<code>{0: [0]}</code> garde <code>{0}</code> indéfiniment), graphe vide (<code>current</code> est vide dès le départ).</li>
+          <li>Limite : chaque pas reparcourt les nœuds atteints, donc c'est lent sur une très longue chaîne (0,3 s pour 3000 nœuds). Aucun souci pour des tests d'exam ; si un jour il faut de la vitesse, l'algorithme de Kahn (degrés entrants) est linéaire.</li>
+          <li>C'est l'idée de la correction de My_EXAM05, en plus court. exam_rank_05 utilise un DFS récursif à 3 états, exposé au <code>RecursionError</code>.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def py_graph_cycle_detector(graph: dict[int, list[int]]) -&gt; bool:
+    current = set(graph)
+    for _ in range(len(graph) + 1):
+        current = {nxt for node in current for nxt in graph.get(node, [])}
+    return len(current) &gt; 0
+
+
+print(py_graph_cycle_detector({0: [1], 1: [2], 2: [0]}))</code></pre>
+      </details>
+    </section>
+
+    <!-- 05 py_island_matrix_counter -->
+    <section id="py_island_matrix_counter" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Niveau 2 · Exercice 05 / 07</div>
+        <h2>island_matrix_counter</h2>
+        <div class="meta">
+          <span class="badge"><code>py_island_matrix_counter.py</code></span>
+          <span class="badge">Confirmé par les 2 repos</span>
+        </div>
+      </header>
+
+      <h3>Énoncé</h3>
+      <p>
+        Écris une fonction <code>island_matrix_counter(matrix)</code> qui reçoit une matrice 2D de
+        chaînes <code>"1"</code> et <code>"0"</code> et retourne le <strong>nombre total d'îles</strong>.
+        Une île est un groupe de cases <code>"1"</code> connectées. Deux cases sont connectées
+        seulement si elles sont <strong>directement adjacentes horizontalement ou verticalement</strong> :
+        les diagonales ne comptent pas.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def island_matrix_counter(matrix: list[list[str]]) -&gt; int:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li><code>"1"</code> = terre, <code>"0"</code> = eau.</li>
+        <li>Chaque île est comptée <strong>une seule fois</strong>.</li>
+        <li>Matrice vide (ou sans lignes) → <code>0</code>.</li>
+        <li>Parcours DFS/BFS ou modification de la matrice autorisés pour explorer chaque île.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>island_matrix_counter([["1","1","1","1","0"], ["1","1","1","0","0"], ["1","1","1","1","0"], ["0","0","0","0","0"]])</code></div><div class="ex-out"><code>1</code></div></div>
+        <div class="ex"><div class="ex-in"><code>island_matrix_counter([["1","1","0","0","0"], ["1","1","0","0","0"], ["0","0","1","0","0"], ["0","0","0","1","1"]])</code></div><div class="ex-out"><code>3</code></div></div>
+        <div class="ex"><div class="ex-in"><code>island_matrix_counter([["1","0","1"], ["0","1","0"], ["1","0","1"]])</code></div><div class="ex-out"><code>5</code></div></div>
+        <div class="ex"><div class="ex-in"><code>island_matrix_counter([])</code></div><div class="ex-out"><code>0</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Compare à la chaîne <code>"1"</code>, pas à l'entier <code>1</code></strong> : <code>"1" == 1</code> vaut <code>False</code>, et tu trouverais 0 île partout.</li>
+          <li><strong>Principe</strong> : parcours chaque case ; dès qu'une terre non visitée apparaît, c'est une nouvelle île. Compteur + 1, puis explore toute l'île avec une pile pour marquer ses cases dans <code>seen</code>.</li>
+          <li><strong>Empile sans réfléchir, trie au dépilage</strong> : on empile les 4 voisins tels quels, et on jette au dépilage ceux qui sont hors grille, déjà vus ou dans l'eau. Une seule série de tests au lieu de deux.</li>
+          <li><strong>Pile explicite plutôt que récursion</strong> : un DFS récursif dépasse la limite de Python (~1000 appels imbriqués) sur une grosse île. Les corrections des deux repos sont récursives et lèvent un <code>RecursionError</code> dès une grille 40 × 40 remplie de <code>"1"</code>.</li>
+          <li><strong>Teste les bornes avant d'indexer</strong> : <code>i - 1 = -1</code> ne plante pas, il lit la dernière ligne et fusionnerait des îles à tort. <code>len(matrix[i])</code> gère aussi des lignes de longueurs différentes.</li>
+          <li>4 voisins seulement. Ajouter les diagonales fusionnerait des îles distinctes : le 3e exemple donne 5 îles, pas 1.</li>
+          <li>Le <code>set</code> <code>seen</code> évite de modifier la matrice de l'appelant. L'énoncé autorise la mutation (remplacer les <code>"1"</code> par <code>"0"</code>, comme le fait My_EXAM05), mais l'appelant récupère alors une grille vidée.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def island_matrix_counter(matrix: list[list[str]]) -&gt; int:
+    seen = set()
+    count = 0
+    for r in range(len(matrix)):
+        for c in range(len(matrix[r])):
+            if matrix[r][c] != "1" or (r, c) in seen:
+                continue
+            count += 1
+            stack = [(r, c)]
+            while stack:
+                i, j = stack.pop()
+                if (i, j) in seen or not (0 &lt;= i &lt; len(matrix) and 0 &lt;= j &lt; len(matrix[i])):
+                    continue
+                if matrix[i][j] == "1":
+                    seen.add((i, j))
+                    stack += [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]
+    return count
+
+
+print(island_matrix_counter([["1", "1", "0"], ["0", "0", "1"]]))</code></pre>
+      </details>
+    </section>
+
+    <!-- 06 py_prism_detector -->
     <section id="py_prism_detector" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 04 / 08</div>
+        <div class="page-eyebrow">Niveau 3 · Exercice 06 / 07</div>
         <h2>prism_detector</h2>
         <div class="meta">
           <span class="badge"><code>py_prism_detector.py</code></span>
-          <span class="badge">Grille 2D</span>
+          <span class="badge">Confirmé par les 2 repos</span>
         </div>
       </header>
 
@@ -1799,324 +1940,50 @@ print(generate_spiral(3))</code></pre>
         <ul>
           <li><strong>Le tuple est <code>(x, y)</code> = (colonne, ligne)</strong>, l'inverse du réflexe <code>(ligne, colonne)</code>. Mais on indexe toujours <code>grid[y][x]</code> : la ligne d'abord.</li>
           <li><strong>Les vecteurs aussi sont en <code>(dx, dy)</code></strong> : <code>(1, 0)</code> avance d'une <em>colonne</em>, pas d'une ligne.</li>
-          <li><strong>Fie-toi aux vecteurs, pas aux libellés de D2</strong> : <code>(-1, 1)</code> va vers le bas-gauche alors que l'énoncé écrit « up-right », et <code>(1, -1)</code> va vers le haut-droite alors qu'il écrit « down-left ». La correction du repo suit les vecteurs, fais pareil (<code>"CEG"</code> lu depuis le <code>C</code> → <code>"D2"</code>).</li>
+          <li><strong>Fie-toi aux vecteurs, pas aux libellés de D2</strong> : <code>(-1, 1)</code> va vers le bas-gauche alors que l'énoncé écrit « up-right », et <code>(1, -1)</code> va vers le haut-droite alors qu'il écrit « down-left ». L'erreur est présente dans les deux repos (y compris l'énoncé japonais de My_EXAM05) : c'est donc bien celle du sujet officiel. Les deux corrections suivent les vecteurs, fais pareil (<code>"CEG"</code> lu depuis le <code>C</code> → <code>"D2"</code>).</li>
+          <li><strong>Construis le mot, puis compare</strong> : dans chaque direction, ajoute à <code>word</code> les lettres qui sont dans la grille. Si une position sort, <code>word</code> est trop court et ne peut pas être égal au motif. Pas de <code>break</code>, pas de drapeau.</li>
+          <li><strong>Motif vide → <code>[]</code>, à tester explicitement</strong> : sinon <code>"" == ""</code> correspondrait sur toutes les cases.</li>
           <li><strong>Déclare les 8 directions dans l'ordre de l'énoncé</strong> : en les parcourant dans cet ordre à l'intérieur des boucles <code>y</code> / <code>x</code>, le résultat sort déjà trié, sans tri final.</li>
-          <li><strong>Teste les bornes avant d'indexer</strong> : un indice négatif ne lève pas d'erreur en Python, il repart de la fin et fausse le résultat sans prévenir.</li>
-          <li>Borne la colonne avec <code>len(grid[yy])</code> plutôt qu'avec <code>len(grid[0])</code> : si les lignes n'ont pas toutes la même longueur, tu évites un <code>IndexError</code>.</li>
+          <li><strong>Teste les bornes avant d'indexer</strong> : un indice négatif ne plante pas, il repart de la fin et fausse le résultat. Borne la colonne avec <code>len(grid[ny])</code>, au cas où les lignes n'ont pas la même longueur.</li>
           <li>Un motif d'<strong>une seule lettre</strong> correspond dans les 8 directions à la fois : chaque case trouvée sort donc 8 fois.</li>
         </ul>
       </div>
 
       <details class="solution">
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
-        <pre><code class="language-python">DIRECTIONS = [
-    (1, 0, "H"),
-    (-1, 0, "H-"),
-    (0, 1, "V"),
-    (0, -1, "V-"),
-    (1, 1, "D1"),
-    (-1, -1, "D1-"),
-    (-1, 1, "D2"),
-    (1, -1, "D2-"),
-]
+        <pre><code class="language-python">DIRECTIONS = [(1, 0, "H"), (-1, 0, "H-"), (0, 1, "V"), (0, -1, "V-"),
+              (1, 1, "D1"), (-1, -1, "D1-"), (-1, 1, "D2"), (1, -1, "D2-")]
 
 
 def prism_detector(grid: list[str], pattern: str):
-    if not grid or not pattern:
+    if not pattern:
         return []
-
-    resultats = []
-
+    result = []
     for y in range(len(grid)):
         for x in range(len(grid[y])):
             for dx, dy, code in DIRECTIONS:
-                match = True
+                word = ""
                 for i in range(len(pattern)):
-                    xx = x + i * dx
-                    yy = y + i * dy
-                    if yy &lt; 0 or yy &gt;= len(grid):
-                        match = False
-                        break
-                    if xx &lt; 0 or xx &gt;= len(grid[yy]):
-                        match = False
-                        break
-                    if grid[yy][xx] != pattern[i]:
-                        match = False
-                        break
-                if match:
-                    resultats.append((x, y, code))
-
-    return resultats
+                    nx, ny = x + i * dx, y + i * dy
+                    if 0 &lt;= ny &lt; len(grid) and 0 &lt;= nx &lt; len(grid[ny]):
+                        word += grid[ny][nx]
+                if word == pattern:
+                    result.append((x, y, code))
+    return result
 
 
 print(prism_detector(["CAT", "A..", "T.."], "CAT"))</code></pre>
       </details>
     </section>
 
-    <!-- 05 py_island_matrix_counter -->
-    <section id="py_island_matrix_counter" class="page">
-      <header class="page-head">
-        <div class="page-eyebrow">Exercice 05 / 08</div>
-        <h2>island_matrix_counter</h2>
-        <div class="meta">
-          <span class="badge"><code>py_island_matrix_counter.py</code></span>
-          <span class="badge">Grille 2D</span>
-        </div>
-      </header>
-
-      <h3>Énoncé</h3>
-      <p>
-        Écris une fonction <code>island_matrix_counter(matrix)</code> qui reçoit une matrice 2D de
-        chaînes <code>"1"</code> et <code>"0"</code> et retourne le <strong>nombre total d'îles</strong>.
-        Une île est un groupe de cases <code>"1"</code> connectées. Deux cases sont connectées
-        seulement si elles sont <strong>directement adjacentes horizontalement ou verticalement</strong> :
-        les diagonales ne comptent pas.
-      </p>
-
-      <h3>Signature</h3>
-      <pre><code class="language-python">def island_matrix_counter(matrix: list[list[str]]) -&gt; int:</code></pre>
-
-      <h3>Contraintes</h3>
-      <ul>
-        <li><code>"1"</code> = terre, <code>"0"</code> = eau.</li>
-        <li>Chaque île est comptée <strong>une seule fois</strong>.</li>
-        <li>Matrice vide (ou sans lignes) → <code>0</code>.</li>
-        <li>Parcours DFS/BFS ou modification de la matrice autorisés pour explorer chaque île.</li>
-      </ul>
-
-      <h3>Exemples</h3>
-      <div class="examples">
-        <div class="ex"><div class="ex-in"><code>island_matrix_counter([["1","1","1","1","0"], ["1","1","1","0","0"], ["1","1","1","1","0"], ["0","0","0","0","0"]])</code></div><div class="ex-out"><code>1</code></div></div>
-        <div class="ex"><div class="ex-in"><code>island_matrix_counter([["1","1","0","0","0"], ["1","1","0","0","0"], ["0","0","1","0","0"], ["0","0","0","1","1"]])</code></div><div class="ex-out"><code>3</code></div></div>
-        <div class="ex"><div class="ex-in"><code>island_matrix_counter([["1","0","1"], ["0","1","0"], ["1","0","1"]])</code></div><div class="ex-out"><code>5</code></div></div>
-        <div class="ex"><div class="ex-in"><code>island_matrix_counter([])</code></div><div class="ex-out"><code>0</code></div></div>
-      </div>
-
-      <div class="hint">
-        <div class="hint-label">Pièges courants</div>
-        <ul>
-          <li><strong>Compare à la chaîne <code>"1"</code>, pas à l'entier <code>1</code></strong> : <code>"1" == 1</code> vaut <code>False</code>, et tu trouverais 0 île partout.</li>
-          <li><strong>Principe</strong> : parcours chaque case ; dès qu'une terre non visitée apparaît, c'est une nouvelle île. Compteur + 1, puis explore toute l'île pour marquer ses cases comme visitées.</li>
-          <li><strong>Pile explicite plutôt que récursion</strong> : un DFS récursif dépasse la limite de Python (~1000 appels imbriqués) sur une grosse île. La correction du repo est récursive et lève un <code>RecursionError</code> dès une grille 40 × 40 remplie de <code>"1"</code>.</li>
-          <li><strong>Marque une case visitée au moment où tu l'empiles</strong>, pas quand tu la dépiles : sinon la même case peut être empilée plusieurs fois.</li>
-          <li>4 voisins seulement. Ajouter les diagonales fusionnerait des îles distinctes : le 3e exemple donne 5 îles, pas 1.</li>
-          <li>Le <code>set</code> de cases visitées évite de modifier la matrice de l'appelant. L'énoncé autorise la mutation (remplacer les <code>"1"</code> par <code>"0"</code>), mais l'appelant récupère alors une grille vidée.</li>
-        </ul>
-      </div>
-
-      <details class="solution">
-        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
-        <pre><code class="language-python">VOISINS = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-
-
-def island_matrix_counter(matrix: list[list[str]]) -&gt; int:
-    if not matrix or not matrix[0]:
-        return 0
-
-    lignes = len(matrix)
-    colonnes = len(matrix[0])
-    visites = set()
-    iles = 0
-
-    for r in range(lignes):
-        for c in range(colonnes):
-            if matrix[r][c] != "1" or (r, c) in visites:
-                continue
-
-            iles += 1
-            visites.add((r, c))
-            pile = [(r, c)]
-            while pile:
-                lr, lc = pile.pop()
-                for dr, dc in VOISINS:
-                    nr = lr + dr
-                    nc = lc + dc
-                    if nr &lt; 0 or nr &gt;= lignes or nc &lt; 0 or nc &gt;= colonnes:
-                        continue
-                    if matrix[nr][nc] == "1" and (nr, nc) not in visites:
-                        visites.add((nr, nc))
-                        pile.append((nr, nc))
-
-    return iles
-
-
-print(island_matrix_counter([["1", "1", "0"], ["0", "0", "1"]]))</code></pre>
-      </details>
-    </section>
-
-    <!-- 06 py_schedule_meetings -->
-    <section id="py_schedule_meetings" class="page">
-      <header class="page-head">
-        <div class="page-eyebrow">Exercice 06 / 08</div>
-        <h2>schedule_meetings</h2>
-        <div class="meta">
-          <span class="badge"><code>py_schedule_meetings.py</code></span>
-          <span class="badge">Tri + glouton</span>
-        </div>
-      </header>
-
-      <h3>Énoncé</h3>
-      <p>
-        Écris une fonction qui détermine le <strong>nombre minimum de salles</strong> nécessaires pour
-        planifier une liste de réunions sans chevauchement, et qui <strong>affecte chaque réunion à une
-        salle</strong>. Chaque réunion est un tuple <code>(début, fin)</code>.
-      </p>
-
-      <h3>Signature</h3>
-      <pre><code class="language-python">def schedule_meetings(intervals: list[tuple[int, int]]) -&gt; tuple[int, list]:</code></pre>
-
-      <h3>Contraintes</h3>
-      <ul>
-        <li>Trier les réunions par heure de début, puis les affecter aux salles disponibles dans l'ordre.</li>
-        <li>Retourner un tuple <code>(nb_salles, salles)</code>, où <code>salles</code> est une liste de listes contenant les réunions de chaque salle.</li>
-        <li>Liste vide → <code>(0, [])</code>.</li>
-      </ul>
-
-      <h3>Exemples</h3>
-      <div class="examples">
-        <div class="ex"><div class="ex-in"><code>schedule_meetings([(0, 30), (5, 10), (15, 20)])</code></div><div class="ex-out"><code>(2, [[(0, 30)], [(5, 10), (15, 20)]])</code></div></div>
-        <div class="ex"><div class="ex-in"><code>schedule_meetings([(15, 20), (0, 30), (5, 10)])</code></div><div class="ex-out"><code>(2, [[(0, 30)], [(5, 10), (15, 20)]])</code></div></div>
-        <div class="ex"><div class="ex-in"><code>schedule_meetings([(9, 10), (10, 12)])</code></div><div class="ex-out"><code>(1, [[(9, 10), (10, 12)]])</code></div></div>
-        <div class="ex"><div class="ex-in"><code>schedule_meetings([(1, 5), (2, 6), (3, 7)])</code></div><div class="ex-out"><code>(3, [[(1, 5)], [(2, 6)], [(3, 7)]])</code></div></div>
-        <div class="ex"><div class="ex-in"><code>schedule_meetings([])</code></div><div class="ex-out"><code>(0, [])</code></div></div>
-      </div>
-
-      <div class="hint">
-        <div class="hint-label">Pièges courants</div>
-        <ul>
-          <li><strong>Trie par heure de début, puis remplis gloutonnement</strong> : pour chaque réunion, prends la première salle libre dans l'ordre ; si aucune ne l'est, ouvre une nouvelle salle. Ce glouton atteint le minimum.</li>
-          <li><strong>Une salle est libre si sa dernière réunion finit avant le début, ou pile au début</strong> : <code>salle[-1][1] &lt;= reunion[0]</code>. Avec <code>&lt;</code> strict, <code>(9, 10)</code> et <code>(10, 12)</code> occuperaient deux salles. L'énoncé ne le dit pas, mais c'est le comportement de la correction du repo.</li>
-          <li>Comparer avec la <strong>dernière</strong> réunion de la salle suffit : comme tout est trié par début, c'est elle qui finit le plus tard.</li>
-          <li><strong>Retourne un tuple, pas une liste</strong> : <code>(2, [...])</code> et <code>[2, [...]]</code> ne sont pas égaux en Python.</li>
-          <li><code>sorted(intervals, key=lambda r: r[0])</code> trie <strong>uniquement</strong> sur le début et garde l'ordre d'origine en cas d'égalité. <code>sorted(intervals)</code> départagerait par l'heure de fin et pourrait changer l'affectation.</li>
-        </ul>
-      </div>
-
-      <details class="solution">
-        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
-        <pre><code class="language-python">def schedule_meetings(intervals: list[tuple[int, int]]) -&gt; tuple[int, list]:
-    if not intervals:
-        return (0, [])
-
-    salles = []
-    for reunion in sorted(intervals, key=lambda r: r[0]):
-        placee = False
-        for salle in salles:
-            if salle[-1][1] &lt;= reunion[0]:
-                salle.append(reunion)
-                placee = True
-                break
-        if not placee:
-            salles.append([reunion])
-
-    return (len(salles), salles)
-
-
-print(schedule_meetings([(0, 30), (5, 10), (15, 20)]))</code></pre>
-      </details>
-    </section>
-
-    <!-- 07 py_graph_cycle_detector -->
-    <section id="py_graph_cycle_detector" class="page">
-      <header class="page-head">
-        <div class="page-eyebrow">Exercice 07 / 08</div>
-        <h2>graph_cycle_detector</h2>
-        <div class="meta">
-          <span class="badge"><code>py_graph_cycle_detector.py</code></span>
-          <span class="badge"><code>graphlib</code> interdit</span>
-        </div>
-      </header>
-
-      <h3>Énoncé</h3>
-      <p>
-        Écris une fonction qui détermine si un <strong>graphe orienté contient au moins un cycle</strong>.
-        Le graphe est donné sous forme de <strong>liste d'adjacence</strong> : un dictionnaire dont les
-        clés sont les identifiants (entiers) des nœuds et les valeurs la liste des voisins vers lesquels
-        ils pointent.
-      </p>
-
-      <h3>Signature</h3>
-      <pre><code class="language-python">def py_graph_cycle_detector(graph: dict[int, list[int]]) -&gt; bool:</code></pre>
-
-      <h3>Contraintes</h3>
-      <ul>
-        <li>Retourner <code>True</code> s'il existe un cycle.</li>
-        <li>Retourner <code>False</code> si le graphe est acyclique ou si le dictionnaire est vide.</li>
-        <li>Gérer correctement les graphes à <strong>plusieurs composantes</strong> non connectées.</li>
-        <li><code>graphlib.TopologicalSorter</code> est interdit : l'algorithme doit être écrit à la main.</li>
-      </ul>
-
-      <h3>Exemples</h3>
-      <div class="examples">
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [2], 2: [0]})</code></div><div class="ex-out"><code>True</code></div></div>
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [2], 2: []})</code></div><div class="ex-out"><code>False</code></div></div>
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({})</code></div><div class="ex-out"><code>False</code></div></div>
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1, 2], 1: [3], 2: [3], 3: []})</code></div><div class="ex-out"><code>False</code></div></div>
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [0]})</code></div><div class="ex-out"><code>True</code></div></div>
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [2], 2: [3], 3: [1]})</code></div><div class="ex-out"><code>True</code></div></div>
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [1], 1: [], 2: [3], 3: [2]})</code></div><div class="ex-out"><code>True</code></div></div>
-        <div class="ex"><div class="ex-in"><code>py_graph_cycle_detector({0: [], 1: [], 2: []})</code></div><div class="ex-out"><code>False</code></div></div>
-      </div>
-
-      <div class="hint">
-        <div class="hint-label">Pièges courants</div>
-        <ul>
-          <li><strong>Attention au nom</strong> : la fonction s'appelle <code>py_graph_cycle_detector</code>, avec le préfixe <code>py_</code>.</li>
-          <li><strong>Méthode sans récursion (Kahn)</strong> : compte le <em>degré entrant</em> de chaque nœud, mets en file ceux à 0, traite-les en décrémentant leurs voisins. Si tous les nœuds ont été traités → pas de cycle ; s'il en reste → cycle.</li>
-          <li><strong>Recense d'abord tous les nœuds</strong>, clés <em>et</em> valeurs : un nœud peut n'apparaître que comme destination (<code>{0: [1]}</code> sans clé <code>1</code>), et <code>graph[voisin]</code> lèverait alors un <code>KeyError</code>. Utilise <code>graph.get(noeud, [])</code>.</li>
-          <li><strong>Composantes séparées</strong> : Kahn les gère tout seul, car on met en file <em>tous</em> les nœuds de degré entrant 0, quelle que soit leur composante (7e exemple : le cycle <code>2 ↔ 3</code> est détecté).</li>
-          <li>La boucle sur soi-même tombe juste toute seule : <code>{0: [0]}</code> donne un degré entrant de 1 dès le départ, le nœud n'est jamais traité → cycle.</li>
-          <li>La correction du repo utilise un DFS à 3 états (non visité / en cours / terminé) : un voisin « en cours » signale un cycle. Ça marche aussi, mais c'est récursif, donc exposé au <code>RecursionError</code> sur une longue chaîne de nœuds.</li>
-        </ul>
-      </div>
-
-      <details class="solution">
-        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
-        <pre><code class="language-python">def py_graph_cycle_detector(graph: dict[int, list[int]]) -&gt; bool:
-    noeuds = set(graph.keys())
-    for voisins in graph.values():
-        for voisin in voisins:
-            noeuds.add(voisin)
-
-    degre_entrant = {}
-    for noeud in noeuds:
-        degre_entrant[noeud] = 0
-
-    for noeud in graph:
-        for voisin in graph[noeud]:
-            degre_entrant[voisin] += 1
-
-    file = []
-    for noeud in noeuds:
-        if degre_entrant[noeud] == 0:
-            file.append(noeud)
-
-    traites = 0
-    tete = 0
-    while tete &lt; len(file):
-        noeud = file[tete]
-        tete += 1
-        traites += 1
-        for voisin in graph.get(noeud, []):
-            degre_entrant[voisin] -= 1
-            if degre_entrant[voisin] == 0:
-                file.append(voisin)
-
-    return traites != len(noeuds)
-
-
-print(py_graph_cycle_detector({0: [1], 1: [2], 2: [0]}))</code></pre>
-      </details>
-    </section>
-
-    <!-- 08 py_word_ladder -->
+    <!-- 07 py_word_ladder -->
     <section id="py_word_ladder" class="page">
       <header class="page-head">
-        <div class="page-eyebrow">Exercice 08 / 08</div>
+        <div class="page-eyebrow">Niveau 3 · Exercice 07 / 07</div>
         <h2>word_ladder</h2>
         <div class="meta">
           <span class="badge"><code>py_word_ladder.py</code></span>
-          <span class="badge">BFS</span>
+          <span class="badge">Confirmé par les 2 repos</span>
         </div>
       </header>
 
@@ -2154,48 +2021,118 @@ print(py_graph_cycle_detector({0: [1], 1: [2], 2: [0]}))</code></pre>
         <div class="hint-label">Pièges courants</div>
         <ul>
           <li><strong>C'est un BFS, pas un DFS</strong> : on veut le chemin le <em>plus court</em>, donc le premier moment où on atteint <code>end</code> est forcément l'optimal.</li>
-          <li><strong>Court-circuite si <code>end</code> n'est pas dans <code>sentence</code></strong> : sinon tu explores tout le graphe pour rien.</li>
-          <li><strong>Retire chaque mot du set dès que tu l'enfiles</strong>, pas au moment où tu le dépiles : sans ça, le même mot est ajouté plusieurs fois et l'exploration explose.</li>
-          <li>Pour les voisins : change chaque lettre par les 25 autres et teste l'appartenance au <code>set</code>, bien plus rapide que de comparer le mot à toute la liste.</li>
+          <li><strong>Court-circuite si <code>end</code> n'est pas dans <code>sentence</code></strong> : la réponse est forcément 0, inutile d'explorer.</li>
+          <li><strong>Retire chaque mot du set dès que tu l'enfiles</strong> (<code>words.remove(nxt)</code>), pas au moment où tu le dépiles : sans ça, le même mot est ajouté plusieurs fois et l'exploration explose.</li>
+          <li><strong><code>words.discard(start)</code></strong> : <code>start</code> n'a pas à être dans la liste. <code>discard</code> ne plante pas s'il n'y est pas, alors que <code>remove</code> lèverait un <code>KeyError</code>.</li>
+          <li><strong>Lettres tirées des mots eux-mêmes</strong> : <code>set("".join(sentence))</code> plutôt que <code>"abcdefghijklmnopqrstuvwxyz"</code>. Ça marche aussi avec des majuscules ou des chiffres, que l'énoncé n'interdit pas.</li>
+          <li><strong>Parcourir une liste pendant qu'on y ajoute</strong> : <code>for word, length in queue</code> voit aussi les éléments ajoutés pendant la boucle. C'est une file sans <code>deque</code> (qu'exam_rank_05 importe) ni indice.</li>
           <li>On compte des <strong>mots</strong>, pas des transitions : la file démarre à <code>(start, 1)</code>.</li>
-          <li>Pas besoin de <code>collections.deque</code> (que la correction du repo importe) : une liste + un indice <code>tete</code> fait une file sans aucun import.</li>
+          <li>My_EXAM05 compare chaque mot à tous les mots restants (une seule lettre de différence) au lieu de générer les variantes. Même résultat, mais plus lent sur une grosse liste.</li>
         </ul>
       </div>
 
       <details class="solution">
         <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
-        <pre><code class="language-python">ALPHABET = "abcdefghijklmnopqrstuvwxyz"
-
-
-def word_ladder(start: str, end: str, sentence: list[str]) -&gt; int:
-    mots_dispo = set(sentence)
-    if end not in mots_dispo:
+        <pre><code class="language-python">def word_ladder(start: str, end: str, sentence: list[str]) -&gt; int:
+    words = set(sentence)
+    if end not in words:
         return 0
-
-    file = [(start, 1)]
-    tete = 0
-    mots_dispo.discard(start)
-
-    while tete &lt; len(file):
-        mot, longueur = file[tete]
-        tete += 1
-
-        if mot == end:
-            return longueur
-
-        for i in range(len(mot)):
-            for lettre in ALPHABET:
-                if lettre == mot[i]:
-                    continue
-                voisin = mot[:i] + lettre + mot[i + 1:]
-                if voisin in mots_dispo:
-                    mots_dispo.discard(voisin)
-                    file.append((voisin, longueur + 1))
-
+    letters = set("".join(sentence))
+    words.discard(start)
+    queue = [(start, 1)]
+    for word, length in queue:
+        if word == end:
+            return length
+        for i in range(len(word)):
+            for letter in letters:
+                nxt = word[:i] + letter + word[i + 1:]
+                if nxt in words:
+                    words.remove(nxt)
+                    queue.append((nxt, length + 1))
     return 0
 
 
 print(word_ladder("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))</code></pre>
+      </details>
+    </section>
+
+    <!-- 08 chunk_array -->
+    <section id="chunk_array" class="page">
+      <header class="page-head">
+        <div class="page-eyebrow">Bonus · Exercice 08</div>
+        <h2>chunk_array</h2>
+        <div class="meta">
+          <span class="badge"><code>chunk_array.py</code></span>
+          <span class="badge">Absent de My_EXAM05</span>
+        </div>
+      </header>
+
+      <div class="hint">
+        <div class="hint-label">Attention</div>
+        <ul>
+          <li>Cet exercice n'est que dans <code>exam_rank_05</code>. Il manque dans My_EXAM05, qui range les sujets par niveau, et il est rédigé dans un autre style que les 7 autres (une histoire, pas de préfixe <code>py_</code>). Il ne fait probablement pas partie des pools : garde-le comme échauffement.</li>
+        </ul>
+      </div>
+
+      <h3>Énoncé</h3>
+      <p>
+        De retour au port, Bob décharge les caisses une par une et les aligne sur le quai en
+        <strong>rangées d'exactement <code>n</code></strong>. Quand le bateau est vide au milieu
+        d'une rangée, il marque les emplacements restants à la craie avec <code>None</code> pour que
+        la rangée compte quand même <code>n</code> positions.
+      </p>
+      <p>
+        Étant donné les caisses dans l'ordre de déchargement et la taille de rangée <code>n</code>,
+        retourne le quai sous forme de <strong>liste de rangées</strong>. Si <code>n</code> vaut zéro
+        ou est négatif, Bob refuse de travailler : retourne une liste vide.
+      </p>
+
+      <h3>Signature</h3>
+      <pre><code class="language-python">def crate_rows(items: list, n: int) -&gt; list[list]:</code></pre>
+
+      <h3>Contraintes</h3>
+      <ul>
+        <li>Découper en rangées d'exactement <code>n</code>, en <strong>gardant l'ordre d'origine</strong>.</li>
+        <li>Si la dernière rangée est incomplète, compléter les cases manquantes avec <code>None</code>.</li>
+        <li><code>n</code> égal à 0 ou négatif → <code>[]</code>.</li>
+        <li>Liste vide → <code>[]</code>.</li>
+        <li>La liste d'entrée <strong>ne doit pas être modifiée</strong>.</li>
+      </ul>
+
+      <h3>Exemples</h3>
+      <div class="examples">
+        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 4, 5], 2)</code></div><div class="ex-out"><code>[[1, 2], [4, 5]]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>crate_rows(["seeds", "pots", "soil", "tools", "rope"], 3)</code></div><div class="ex-out"><code>[["seeds", "pots", "soil"], ["tools", "rope", None]]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 3, 4, 5, 6, 7], 3)</code></div><div class="ex-out"><code>[[1, 2, 3], [4, 5, 6], [7, None, None]]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 3], 0)</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>crate_rows([1, 2, 3], -2)</code></div><div class="ex-out"><code>[]</code></div></div>
+        <div class="ex"><div class="ex-in"><code>crate_rows([], 4)</code></div><div class="ex-out"><code>[]</code></div></div>
+      </div>
+
+      <div class="hint">
+        <div class="hint-label">Pièges courants</div>
+        <ul>
+          <li><strong>Teste <code>n &lt;= 0</code> avant tout</strong> : <code>range(0, len(items), 0)</code> lève un <code>ValueError</code> (un pas de 0 est interdit).</li>
+          <li><strong>L'entrée n'est jamais modifiée</strong> : <code>items[i:i + n]</code> crée une nouvelle liste, et <code>row + [None] * ...</code> en crée encore une autre.</li>
+          <li>Le remplissage tient en une expression : sur une rangée complète, <code>n - len(row)</code> vaut 0 et <code>[None] * 0</code> n'ajoute rien. Seule la dernière rangée reçoit des <code>None</code>.</li>
+          <li>La liste vide n'a pas besoin d'un cas spécial : <code>range(0, 0, n)</code> est vide et on retourne <code>[]</code>.</li>
+          <li>La correction du repo nomme la fonction <code>chunkArray(arr, size)</code>, mais l'énoncé impose <strong><code>crate_rows(items, n)</code></strong> : c'est l'énoncé qui fait foi.</li>
+        </ul>
+      </div>
+
+      <details class="solution">
+        <summary><span class="sol-icon">▶</span><span class="sol-text">Voir la solution</span></summary>
+        <pre><code class="language-python">def crate_rows(items: list, n: int) -&gt; list[list]:
+    if n &lt;= 0:
+        return []
+    rows = []
+    for i in range(0, len(items), n):
+        row = items[i:i + n]
+        rows.append(row + [None] * (n - len(row)))
+    return rows
+
+
+print(crate_rows(["seeds", "pots", "soil", "tools", "rope"], 3))</code></pre>
       </details>
     </section>
     </div><!-- /exam-content 05 -->
